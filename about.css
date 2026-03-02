@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+.page-about {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #051627 0%, #050505 100%);
+    color: white;
+}
+
+/* NAVBAR */
+
+.navbar .logo a {
+    color: #5558f7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar .logo a:hover {
+    color: #3336ea;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(5, 22, 39, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #5558f7;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover {
+    color: #5558f7;
+}
+
+/* HERO SOBRE */
+
+.about-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 140px 8%;
+    min-height: 100vh;
+    gap: 60px;
+}
+
+/* LADO ESQUERDO */
+
+.hero-left {
+    max-width: 520px;
+}
+
+.hero-left h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero-left span {
+    color: #5558f7;
+}
+
+.hero-descripition {
+    font-size: 18;
+    color: #cfcfcf;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.location-badge {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(168, 85, 247, 0.15);
+    border: 1px solid #5558f7;
+    font-weight: 500;
+}
+
+/* TERMINAL */
+
+.hero-terminal {
+    width: 420px;
+    background: #0b0b10;
+    border-radius: 14px;
+    border: 1px solid #2a2a35;
+    box-shadow: 0 0 40px rgba(115, 85, 247, 0.15);
+    overflow: hidden;
+}
+
+.terminal-header {
+    background: #111;
+    padding: 10px;
+    display: flex;
+    gap: 6px;
+}
+
+.terminal-header span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #333;
+
+}
+
+.terminal-body {
+    padding: 25px;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.highlight {
+    color: #5558f7;
+    margin-bottom: 12px;
+}
+
+.online {
+    color: #22c55e;
+}
+
+/* TIMELINE */
+
+.timeline {
+    padding: 120px 8%;
+
+}
+
+.timeline h2 {
+    font-size: 60px;
+    margin-bottom: 60px;
+}
+
+.timeline h2 span {
+    color: #5558f7;
+}
+
+.timeline-container {
+    border-left: 2px solid #5558f7;
+    padding-left: 40px;
+}
+
+.timeline-item {
+    margin-bottom: 50px;
+    position: relative;
+    list-style: none;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -49;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background: #5558f7;
+    border-radius: 50%;
+    list-style: none;
+    display: none;
+}
+
+.year {
+    font-weight: 700;
+    color: #5558f7;
+    list-style: none;
+
+}
+
+.timeline-item h3 {
+    margin: 8px 0;
+    list-style: none;
+
+}
+
+.timeline-item p {
+    color: #cfcfcf;
+    list-style: none;
+
+}

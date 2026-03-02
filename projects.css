@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page-projects {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #051627 0%, #050505 100%);
+    color: white;
+}
+
+/* NAVBAR */
+
+.navbar .logo a {
+    color: #5558f7;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar .logo a:hover {
+    color: #3336ea;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(5, 22, 39, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #5558f7;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover {
+    color: #5558f7;
+}
+
+/* HERO */
+
+.projects-hero {
+    padding-top: 140px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.projects-hero h1 {
+    font-size: 48px;
+}
+
+.projects-hero span {
+    color: #5558f7;
+}
+
+.projects-hero p {
+    margin-top: 10px;
+    color: #aaa;
+}
+
+/* PROJETOS */
+
+.project {
+    padding: 80px 60px;
+}
+
+.project-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.project-image {
+    flex: 0 0 45%;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    background: #111;
+    padding: 14px;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.project-image img:hover {
+    transform: scale(1.02);
+}
+
+.project-info {
+    flex: 1;
+    max-width: 600px;
+}
+
+.project-info h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.project-desc {
+    color: #aaa;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.project-meta p {
+    margin-bottom: 6px;
+    color: #ccc;
+}
+
+/* BOTÕES */
+
+.project-buttons {
+    margin-top: 24px;
+    display: flex;
+    gap: 14px;
+}
+
+.btn-primary {
+    background: #5558f7;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #3a28d9;
+}
+
+
+.btn-secondary {
+    border: 1px solid #5558f7;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #5558f7;
+}
+
+/* ALTERNAR LADO */
+
+.alt .project-container {
+    flex-direction: row-reverse;
+}
+
+/* ALTERNAR LADO */
+
+.projects-cta {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.projects-cta h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.projects-cta span {
+    color: #5558f7;
+}
+
+.projects-cta p {
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.big {
+    font-size: 18px;
+    padding: 16px 36px;
+}
+
+/* ===== CARROSSEL ===== */
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #111;
+    padding: 14px;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(124, 58, 237, 0.25);
+
+}
+
+/* imagens */
+
+.carousel-track {
+    position: relative;
+    transition: transform 0.45s ease-in-out;
+
+}
+
+.carousel-img {
+    width: 100%;
+    display: none;
+    border-radius: 12px;
+}
+
+.carousel-img.active {
+    display: block;
+}
+
+/* BOTÕES */
+
+.carousel-btn {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 28px;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.carousel-btn:hover {
+    background: rgba(58, 76, 237, 0.8);
+
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* BOLINHAS */
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #555;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.dot.active {
+    background: #5558f7;
+}
+
+.btn-primary-big {
+    display: inline-block;
+    background: #5558f7;
+    padding: 14px 28px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.6;
+    margin-top: 60px;
+} 
