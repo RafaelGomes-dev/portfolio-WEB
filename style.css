@@ -529,36 +529,67 @@ html {
 
 /* ================= RESPONSIVO ================= */
 
+/* ================= RESPONSIVO (Substitua o antigo por este) ================= */
+
 @media (max-width: 900px) {
+  .page-home .navbar {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+  .page-home .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   .page-home .hero {
+    height: auto;
     flex-direction: column;
     text-align: center;
+    padding: 140px 20px 60px;
     gap: 40px;
   }
-
   .page-home .hero-text h1 {
-    font-size: 44px;
+    font-size: 38px;
+  }
+  .page-home .hero-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+
+  .hero-img, .hero-photo-ring, .photo-ring {
+    width: 250px;
+    height: 250px;
   }
 
-  .page-home .navbar {
-    padding: 20px;
-  }
-
+  
   .page-home .section {
     padding: 80px 20px;
   }
-
-  .page-home .menu {
-    gap: 15px;
-  }
-
   .projects-grid {
     grid-template-columns: 1fr;
   }
-
   .skills-grid {
     grid-template-columns: 1fr 1fr;
   }
 
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-info {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-title, .projects-title, .experiencia-title, .skills-title {
+    font-size: 2.2rem;
+  }
 }
