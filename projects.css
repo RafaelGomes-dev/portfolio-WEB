@@ -303,3 +303,42 @@ footer {
     opacity: 0.6;
     margin-top: 60px;
 } 
+
+/* ================= RESPONSIVO PROJETOS ================= */
+@media (max-width: 900px) {
+
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  
+  .projects-hero {
+    padding: 140px 20px 40px;
+  }
+  .projects-hero h1 {
+    font-size: 36px;
+  }
+
+
+  .project {
+    padding: 40px 20px;
+  }
+  .project-container, .alt .project-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .project-info h2 {
+    font-size: 28px;
+  }
+  .project-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
