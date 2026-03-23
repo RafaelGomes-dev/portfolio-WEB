@@ -4,7 +4,7 @@ Portfólio pessoal desenvolvido com HTML, CSS e JavaScript puro, hospedado via G
 
 ## Acesse online
 
-👉 [rafaelgomes-dev.github.io/portfolio-WEB](https://rafaelgomes-dev.github.io/portfolio-WEB/)
+[rafaelgomes-dev.github.io/portfolio-WEB](https://rafaelgomes-dev.github.io/portfolio-WEB/)
 
 ## Páginas
 
