@@ -204,3 +204,45 @@ html {
     list-style: none;
 
 }
+
+/* ================= RESPONSIVO SOBRE ================= */
+
+
+@media (max-width: 900px) {
+ 
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+  }
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Hero Sobre */
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 140px 20px 60px;
+    min-height: auto;
+  }
+  
+  .hero-terminal {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .timeline {
+    padding: 60px 20px;
+  }
+  .timeline h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .timeline-container {
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+  }
+}
