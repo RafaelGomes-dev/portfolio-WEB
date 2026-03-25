@@ -2,21 +2,32 @@
 <html lang="pt-br">
 
 <head>
-    <script src="animations.js"></script>
-    <script src="i18n.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafael Gomes - DEV</title>
+    <title>Projetos — Rafael Gomes</title>
+    <meta name="description" content="Projetos desenvolvidos por Rafael Gomes: sistema de controle de gastos fullstack com Flask e bot para Discord em Python.">
+    <meta property="og:title" content="Projetos — Rafael Gomes">
+    <meta property="og:description" content="Projetos desenvolvidos por Rafael Gomes: sistema de controle de gastos fullstack com Flask e bot para Discord em Python.">
+    <meta property="og:type" content="website">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="projects.css">
+    <script src="animations.js" defer></script>
+    <script src="i18n.js" defer></script>
+    <script src="navbar.js" defer></script>
 </head>
 
 <body class="page-projects">
 
     <nav class="navbar">
         <h1 class="logo"><a href="index.html">RafaelDEV.</a></h1>
+
+        <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
@@ -62,6 +73,7 @@
                         <span class="dot active"></span>
                         <span class="dot"></span>
                         <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
 
                 </div>
@@ -93,92 +105,92 @@
 
         </div>
 
-        <!-- PROJETO 1 -->
+    </section>
 
-        <section class="project">
+    <!-- PROJETO 2 -->
 
-            <div class="project-container">
+    <section class="project">
 
-                <div class="project-image">
+        <div class="project-container">
 
-                    <div class="carousel">
+            <div class="project-image">
 
-                        <button class="carousel-btn prev">❮</button>
+                <div class="carousel">
 
-                        <div class="carousel-track">
+                    <button class="carousel-btn prev">❮</button>
 
-                            <img src="imagens/img2bot.png" class="carousel-img active">
-                            <img src="imagens/img3bot.png" class="carousel-img">
-                            <img src="imagens/img4bot.png" class="carousel-img">
-                            <img src="imagens/img5bot.png" class="carousel-img">
+                    <div class="carousel-track">
 
-                        </div>
-
-                        <button class="carousel-btn next">❯</button>
-
-                        <div class="carousel-dots">
-                            <span class="dot active"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                        </div>
+                        <img src="imagens/img2bot.png" class="carousel-img active">
+                        <img src="imagens/img3bot.png" class="carousel-img">
+                        <img src="imagens/img4bot.png" class="carousel-img">
+                        <img src="imagens/img5bot.png" class="carousel-img">
 
                     </div>
+
+                    <button class="carousel-btn next">❯</button>
+
+                    <div class="carousel-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="project-info">
+
+                <h2>Bot do Meta — Discord COD</h2>
+
+                <p class="project-desc">
+                    Bot para Discord voltado a jogadores de Call of Duty,
+                    desenvolvido em Python. Conta com consulta de status
+                    de servidores em tempo real via web scraping, meta de
+                    armas atualizado, sistema de ranking com banco de dados
+                    SQLite, enquetes, sorteios e notificações automáticas.
+                    Projeto em produção, hospedado na nuvem.
+                </p>
+
+                <div class="project-meta">
+                    <p><strong>Tecnologias:</strong> Python, discord.py, SQLite, aiohttp, BeautifulSoup4</p>
+                    <p><strong>Tipo:</strong> Projeto Pessoal / Bot / Automação</p>
+                    <p><strong>Cliente:</strong> -</p>
                 </div>
 
-                <div class="project-info">
-
-                    <h2>Bot do Meta — Discord COD</h2>
-
-                    <p class="project-desc">
-                        Bot para Discord voltado a jogadores de Call of Duty,
-                        desenvolvido em Python. Conta com consulta de status
-                        de servidores em tempo real via web scraping, meta de
-                        armas atualizado, sistema de ranking com banco de dados
-                        SQLite, enquetes, sorteios e notificações automáticas.
-                        Projeto em produção, hospedado na nuvem.
-                    </p>
-
-                    <div class="project-meta">
-                        <p><strong>Tecnologias:</strong>Python, discord.py, SQLite, aiohttp, BeautifulSoup4</p>
-                        <p><strong>Tipo:</strong>Projeto Pessoal / Bot / Automação</p>
-                        <p><strong>Cliente:</strong> -</p>
-                    </div>
-
-                    <div class="project-buttons">
-                        <a href="https://github.com/RafaelGomes-dev/bot-discord-cod" class="btn-primary"> Ver no github</a>
-                        <a href="https://discord.gg/azNtmswJ" class="btn-secondary">Demo</a>
-                    </div>
-
+                <div class="project-buttons">
+                    <a href="https://github.com/RafaelGomes-dev/bot-discord-cod" class="btn-primary">Ver no GitHub</a>
+                    <a href="https://discord.gg/azNtmswJ" class="btn-secondary">Demo</a>
                 </div>
 
             </div>
 
-        </section>
+        </div>
+
+    </section>
 
 
+    <!-- ===== CTA FINAL ===== -->
 
+    <section class="projects-cta">
 
-        <!-- ===== CTA FINAL ===== -->
+        <h2>Interessado em trabalhar comigo<span>?</span></h2>
 
-        <section class="projects-cta">
+        <p>Posso ajudar no desenvolvimento do seu projeto ou ideia.</p>
 
-            <h2>Interessado em trabalhar comigo<span>?</span></h2>
+        <a href="contato.html" class="btn-primary-big">
+            Entrar em contato
+        </a>
 
-            <p>Posso ajudar no desenvolvimento do seu projeto ou ideia.</p>
+    </section>
 
-            <a href="contato.html" class="btn-primary-big">
-                Entrar em contato
-            </a>
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 Rafael Gomes — Todos os direitos reservados</p>
+    </footer>
 
-        </section>
-
-        <!-- ===== FOOTER ===== -->
-        <footer>
-            <p>© 2026 Rafael Gomes — Todos os direitos reservados</p>
-        </footer>
-
-
-        <script src="projects.js"></script>
+    <script src="projects.js" defer></script>
 
 
 

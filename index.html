@@ -2,16 +2,22 @@
 <html lang="pt-br">
 
 <head>
-    <script src="animations.js"></script>
-    <script src="i18n.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafael Gomes - DEV</title>
+    <title>Rafael Gomes — Desenvolvedor Full Stack</title>
+    <meta name="description" content="Portfolio de Rafael Gomes, desenvolvedor full stack com experiência em Python, Flask, Java e desenvolvimento web. Estudante de Engenharia da Computação na PUCPR.">
+    <meta property="og:title" content="Rafael Gomes — Desenvolvedor Full Stack">
+    <meta property="og:description" content="Projetos, skills e experiências de Rafael Gomes, estagiário na Positivo Tecnologia e desenvolvedor apaixonado por resolver problemas com código.">
+    <meta property="og:type" content="website">
 
     <link rel="icon" type="image/jpeg" href="imagens/logo.jpeg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="animations.js" defer></script>
+    <script src="i18n.js" defer></script>
+    <script src="navbar.js" defer></script>
 </head>
 
 
@@ -22,6 +28,12 @@
     <header>
         <nav class="navbar">
             <h1 class="logo"><a href="index.html">RafaelDEV.</a></h1>
+
+            <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
@@ -37,7 +49,7 @@
     <section class="hero">
 
         <div class="hero-text">
-            <h3>Ola! Eu me chamo Rafael Gomes </h3>
+            <h3>Olá! Eu me chamo Rafael Gomes</h3>
             <h1>DESENVOLVEDOR EM FORMAÇÃO</h1>
             <p>Estudante do 4º período de Engenharia da Computação na PUCPR e estagiário apaixonado por resolver
                 problemas reais através de código. Com uma base sólida em C, tenho experiência prática no
@@ -78,7 +90,7 @@
                 </div>
 
                 <div class="project-content">
-                    <h3>Gestao de Gastos</h3>
+                    <h3>Gestão de Gastos</h3>
                     <p>Uma web com front e backend feito com micro-framework Flask</p>
                     <a href="https://github.com/RafaelGomes-dev/controle-gastos">Ver no GitHub →</a>
                 </div>
@@ -113,54 +125,66 @@
 
         <h2 class="skills-title">Skills<span>.</span></h2>
 
-        <div class="skills-grid">
+        <div class="skills-icons-grid">
 
-            <!-- FRONTEND -->
-            <div class="skill-column">
-                <h3>Frontend</h3>
-                <ul>
-                    <li>HTML5 & CSS3</li>
-                    <li>JavaScript</li>
-                    <li>React.js</li>
-                    <li>Next.js</li>
-                    <li>Design Responsivo</li>
-                </ul>
+            <div class="skill-badge">
+                <i class="devicon-html5-plain colored"></i>
+                <span>HTML5</span>
             </div>
 
-            <!-- BACKEND -->
-            <div class="skill-column">
-                <h3>Backend</h3>
-                <ul>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>Desencolvimento de APIs</li>
-                    <li>APIs básicas</li>
-                    <li>Automação de Tarefas</li>
-                </ul>
+            <div class="skill-badge">
+                <i class="devicon-css3-plain colored"></i>
+                <span>CSS3</span>
             </div>
 
-            <!-- BANCO DE DADOS -->
-            <div class="skill-column">
-                <h3>Banco de Dados</h3>
-                <ul>
-                    <li>MySQL</li>
-                    <li>SQL</li>
-                    <li>Modelagem Relacional</li>
-                    <li>MySQL / PostgreSQL</li>
-                    <li>Consultas e Joins</li>
-                </ul>
+            <div class="skill-badge">
+                <i class="devicon-javascript-plain colored"></i>
+                <span>JavaScript</span>
             </div>
 
-            <!-- SOFT SKILLS -->
-            <div class="skill-column">
-                <h3>Soft Skills</h3>
-                <ul>
-                    <li>Trabalho em equipe</li>
-                    <li>Proatividade</li>
-                    <li>Comunicação clara</li>
-                    <li>Organização</li>
-                    <li>Aprendizado rápido</li>
-                </ul>
+            <div class="skill-badge">
+                <i class="devicon-react-original colored"></i>
+                <span>React.js</span>
+            </div>
+
+            <div class="skill-badge">
+                <i class="devicon-nextjs-plain"></i>
+                <span>Next.js</span>
+            </div>
+
+            <div class="skill-badge">
+                <i class="devicon-python-plain colored"></i>
+                <span>Python</span>
+            </div>
+
+            <div class="skill-badge">
+                <i class="devicon-flask-original"></i>
+                <span>Flask</span>
+            </div>
+
+            <div class="skill-badge">
+                <i class="devicon-java-plain colored"></i>
+                <span>Java</span>
+            </div>
+
+            <div class="skill-badge">
+                <i class="devicon-mysql-plain colored"></i>
+                <span>MySQL</span>
+            </div>
+
+            <div class="skill-badge">
+                <i class="devicon-postgresql-plain colored"></i>
+                <span>PostgreSQL</span>
+            </div>
+
+            <div class="skill-badge">
+                <i class="devicon-sqlite-plain colored"></i>
+                <span>SQLite</span>
+            </div>
+
+            <div class="skill-badge">
+                <i class="devicon-git-plain colored"></i>
+                <span>Git</span>
             </div>
 
         </div>
@@ -191,7 +215,6 @@
                         <li>Automação de tarefas com Python</li>
                         <li>Manutenção de Sistemas Legados</li>
                         <li>Engenharia de Serviços</li>
-                        <li>Troubleshooting</li>
                         <li>Troubleshooting</li>
                         <li>Suporte ao Cliente</li>
                     </ul>
@@ -224,7 +247,7 @@
 
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                        <a href="/cdn-cgi/l/email-protection#2e5c4f484740464f4941434b5d1f1c1d1f6e49434f4742004d4143"><span class="__cf_email__" data-cfemail="afddcec9c6c1c7cec8c0c2cadc9e9d9c9eefc8c2cec6c381ccc0c2">[email&#160;protected]</span></a>
+                        <a href="mailto:rafinhagomes1231@gmail.com">rafinhagomes1231@gmail.com</a>
                     </div>
 
                     <div class="contact-item">
@@ -235,6 +258,11 @@
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
                         <a href="https://github.com/RafaelGomes-dev" target="_blank">github.com/RafaelGomes-dev</a>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                        <a href="https://www.linkedin.com/in/rafael-gomes-1b91a6280" target="_blank">linkedin.com/in/rafael-gomes</a>
                     </div>
 
                 </div>
@@ -255,7 +283,6 @@
 
     </section>
 
-    <!-- 
     <!-- ===== FOOTER ===== -->
     <footer>
         <p>© 2026 Rafael Gomes — Todos os direitos reservados</p>

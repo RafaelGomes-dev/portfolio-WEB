@@ -1,7 +1,4 @@
-/* =============================================
-   PORTFOLIO i18n — Rafael Gomes DEV
-   PT-BR ↔ EN toggle, persists via localStorage
-   ============================================= */
+
 
 const TRANSLATIONS = {
 
@@ -124,7 +121,7 @@ function applyTranslations(lang) {
       // Preserve inner <span> (used for the colored dot)
       const span = el.querySelector('span');
       if (span) {
-        el.childNodes.forEach(n => { if (n.nodeType === Node.TEXT_NODE) n.textContent = TRANSLATIONS[key][lang]; });
+        el.childNodes.forEach(n => { if (n.nodeType === Node.TEXT_NODE && n.textContent.trim() !== '') n.textContent = TRANSLATIONS[key][lang]; });
       } else {
         el.textContent = TRANSLATIONS[key][lang];
       }

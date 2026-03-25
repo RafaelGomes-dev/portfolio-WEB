@@ -6,13 +6,8 @@
 
 /* ===== PAGE TRANSITION ===== */
 
-// Fix white flash: set background immediately before any CSS loads
-document.documentElement.style.background = '#050505';
-document.documentElement.style.opacity = '0';
-
-// Fade in as soon as DOM is parsed (don't wait for images/fonts)
+// Fade in — CSS already sets opacity:0 and transition, so just flip to 1
 document.addEventListener('DOMContentLoaded', () => {
-  document.documentElement.style.transition = 'opacity 0.45s ease';
   requestAnimationFrame(() => {
     document.documentElement.style.opacity = '1';
   });
