@@ -66,13 +66,27 @@ html {
 /* HERO */
 
 .projects-hero {
-    padding-top: 140px;
+    padding-top: 160px;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.projects-hero::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #5558f7;
+    border-radius: 100px;
+    margin: 32px auto 0;
+    opacity: 0.7;
 }
 
 .projects-hero h1 {
-    font-size: 48px;
+    font-size: 52px;
+    font-weight: 700;
 }
 
 .projects-hero span {
@@ -80,94 +94,150 @@ html {
 }
 
 .projects-hero p {
-    margin-top: 10px;
-    color: #aaa;
+    margin-top: 12px;
+    color: #777;
+    font-size: 1rem;
 }
 
 /* PROJETOS */
 
 .project {
     padding: 80px 60px;
+    position: relative;
+}
+
+.project + .project {
+    border-top: 1px solid #111;
 }
 
 .project-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    gap: 60px;
     max-width: 1200px;
     margin: auto;
 }
 
 .project-image {
-    flex: 0 0 45%;
-}
-
-.project-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 16px;
-    background: #111;
-    padding: 14px;
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.6),
-        0 0 0 1px rgba(0, 0, 0, 0.6);
-    transition: transform 0.3s ease;
-}
-
-.project-image img:hover {
-    transform: scale(1.02);
+    flex: 0 0 48%;
 }
 
 .project-info {
     flex: 1;
-    max-width: 600px;
+    max-width: 560px;
+}
+
+/* NÚMERO DO PROJETO */
+
+.project-index {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #5558f7;
+    letter-spacing: 0.12em;
+    background: rgba(85, 88, 247, 0.1);
+    border: 1px solid rgba(85, 88, 247, 0.3);
+    padding: 3px 12px;
+    border-radius: 100px;
+    margin-bottom: 12px;
 }
 
 .project-info h2 {
-    font-size: 32px;
-    margin-bottom: 16px;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+/* TIPO DO PROJETO */
+
+.project-type {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 18px;
+    letter-spacing: 0.03em;
 }
 
 .project-desc {
-    color: #aaa;
-    margin-bottom: 20px;
-    line-height: 1.6;
+    color: #999;
+    margin-bottom: 24px;
+    line-height: 1.7;
+    font-size: 0.95rem;
 }
 
-.project-meta p {
-    margin-bottom: 6px;
-    color: #ccc;
+/* TECH TAGS */
+
+.project-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.project-tech-tags span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #5558f7;
+    background: rgba(85, 88, 247, 0.08);
+    border: 1px solid rgba(85, 88, 247, 0.22);
+    padding: 4px 12px;
+    border-radius: 100px;
+    transition: 0.2s;
+}
+
+.project-tech-tags span:hover {
+    background: rgba(85, 88, 247, 0.18);
+    border-color: rgba(85, 88, 247, 0.5);
 }
 
 /* BOTÕES */
 
 .project-buttons {
-    margin-top: 24px;
     display: flex;
-    gap: 14px;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     background: #5558f7;
-    padding: 12px 22px;
+    padding: 11px 22px;
     border-radius: 8px;
     text-decoration: none;
     color: white;
     font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.25s;
 }
 
 .btn-primary:hover {
     background: #3a28d9;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(85, 88, 247, 0.35);
 }
 
-
 .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     border: 1px solid #5558f7;
-    padding: 12px 22px;
+    padding: 11px 22px;
     border-radius: 8px;
     text-decoration: none;
     color: #5558f7;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.25s;
+}
+
+.btn-secondary:hover {
+    background: rgba(85, 88, 247, 0.1);
+    transform: translateY(-2px);
 }
 
 /* ALTERNAR LADO */
@@ -181,11 +251,25 @@ html {
 .projects-cta {
     text-align: center;
     padding: 100px 20px;
+    position: relative;
+}
+
+.projects-cta::before {
+    content: '';
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #5558f7, transparent);
+    margin: 0 auto 80px;
+    opacity: 0.4;
 }
 
 .projects-cta h2 {
-    font-size: 36px;
-    margin-bottom: 12px;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    line-height: 1.2;
 }
 
 .projects-cta span {
@@ -193,13 +277,29 @@ html {
 }
 
 .projects-cta p {
-    color: #aaa;
-    margin-bottom: 30px;
+    color: #777;
+    margin-bottom: 36px;
+    font-size: 1rem;
 }
 
-.big {
-    font-size: 18px;
+.btn-primary-big {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #5558f7;
     padding: 16px 36px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.btn-primary-big:hover {
+    background: #3a28d9;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(85, 88, 247, 0.4);
 }
 
 /* ===== CARROSSEL ===== */
@@ -285,20 +385,6 @@ html {
 .dot.active {
     background: #5558f7;
 }
-
-.btn-primary-big {
-    display: inline-block;
-    background: #5558f7;
-    padding: 14px 28px;
-    border-radius: 8px;
-
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-
-    transition: 0.3s;
-}
-
 
 footer {
     text-align: center;
@@ -388,18 +474,46 @@ footer {
 
 
   .project {
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
   .project-container, .alt .project-container {
     flex-direction: column;
     text-align: center;
-    gap: 30px;
+    gap: 36px;
+  }
+  .project-image {
+    flex: none;
+    width: 100%;
   }
   .project-info h2 {
-    font-size: 28px;
+    font-size: 26px;
+  }
+  .project-tech-tags {
+    justify-content: center;
   }
   .project-buttons {
     justify-content: center;
     flex-wrap: wrap;
+  }
+  .projects-cta h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .projects-hero h1 {
+    font-size: 30px;
+  }
+  .project {
+    padding: 40px 16px;
+  }
+  .projects-cta {
+    padding: 70px 16px;
+  }
+  .projects-cta h2 {
+    font-size: 24px;
+  }
+  .project-info h2 {
+    font-size: 22px;
   }
 }

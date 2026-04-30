@@ -1,9 +1,3 @@
-/* =============================================
-   PORTFOLIO ANIMATIONS — Rafael Gomes DEV
-   - Page transitions (fade in/out)
-   - Scroll reveal animations
-   ============================================= */
-
 /* ===== PAGE TRANSITION ===== */
 
 // Fade in — CSS already sets opacity:0 and transition, so just flip to 1

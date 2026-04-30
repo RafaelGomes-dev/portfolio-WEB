@@ -23,11 +23,15 @@ const TRANSLATIONS = {
 
   'proj1-title': { pt: 'Gestão de Gastos', en: 'Expense Manager' },
   'proj1-desc':  { pt: 'Uma web com front e backend feito com micro-framework Flask', en: 'A full-stack web app with front and backend built with the Flask micro-framework' },
-  'proj1-link':  { pt: 'Ver no GitHub →', en: 'View on GitHub →' },
+  'proj1-link':  { pt: ' Ver no GitHub', en: ' View on GitHub' },
 
   'proj2-title': { pt: 'Bot Discord - CALL OF DUTY', en: 'Discord Bot - CALL OF DUTY' },
   'proj2-desc':  { pt: 'Bot para Discord voltado a jogadores de COD, com status de servidores, meta de armas, ranking com SQLite e notificações automáticas', en: 'Discord bot aimed at COD players, featuring server status, weapon meta, SQLite ranking and automatic notifications' },
-  'proj2-link':  { pt: 'Ver no GitHub →', en: 'View on GitHub →' },
+  'proj2-link':  { pt: ' Ver no GitHub', en: ' View on GitHub' },
+
+  'proj3-title': { pt: 'Gestão de Ativos de TI', en: 'IT Asset Management' },
+  'proj3-desc':  { pt: 'API REST com JWT, HATEOAS e Swagger para gerenciamento de hardware e licenças vinculadas a funcionários.', en: 'REST API with JWT, HATEOAS and Swagger for managing hardware and software licenses linked to employees.' },
+  'proj3-link':  { pt: ' Ver no GitHub', en: ' View on GitHub' },
 
   /* ── INDEX — Skills ── */
   'section-skills': { pt: 'Skills', en: 'Skills' },
@@ -87,12 +91,19 @@ const TRANSLATIONS = {
   'p1-title': { pt: 'Sistema de Controle de Gastos (Fullstack)', en: 'Expense Tracking System (Fullstack)' },
   'p1-desc':  { pt: 'Aplicação web fullstack desenvolvida em Python utilizando o microframework Flask. O sistema oferece um painel completo para gestão financeira pessoal, contando com banco de dados relacional e um sistema de autenticação seguro com senhas criptografadas. A interface é totalmente responsiva e os dados de cada usuário são isolados. Projeto em produção, hospedado na nuvem.', en: 'Fullstack web application built in Python using the Flask micro-framework. The system provides a complete personal finance management dashboard with a relational database and a secure authentication system with encrypted passwords. The interface is fully responsive and each user\'s data is isolated. Project live in production, hosted in the cloud.' },
   'p1-type':  { pt: 'Projeto Pessoal / Fullstack', en: 'Personal Project / Fullstack' },
-  'p1-github': { pt: 'Ver no GitHub', en: 'View on GitHub' },
+  'p1-github': { pt: ' Ver no GitHub', en: ' View on GitHub' },
+  'p1-proj-type': { pt: 'Fullstack · Projeto Pessoal', en: 'Fullstack · Personal Project' },
 
   'p2-title': { pt: 'Bot do Meta — Discord COD', en: 'Meta Bot — Discord COD' },
   'p2-desc':  { pt: 'Bot para Discord voltado a jogadores de Call of Duty, desenvolvido em Python. Conta com consulta de status de servidores em tempo real via web scraping, meta de armas atualizado, sistema de ranking com banco de dados SQLite, enquetes, sorteios e notificações automáticas. Projeto em produção, hospedado na nuvem.', en: 'Discord bot aimed at Call of Duty players, built in Python. Features real-time server status via web scraping, updated weapon meta, SQLite-powered ranking system, polls, giveaways and automatic notifications. Project live in production, hosted in the cloud.' },
   'p2-type':  { pt: 'Projeto Pessoal / Bot / Automação', en: 'Personal Project / Bot / Automation' },
-  'p2-github': { pt: 'Ver no GitHub', en: 'View on GitHub' },
+  'p2-github': { pt: ' Ver no GitHub', en: ' View on GitHub' },
+  'p2-proj-type': { pt: 'Bot · Automação · Projeto Pessoal', en: 'Bot · Automation · Personal Project' },
+
+  'p3-title': { pt: 'Gestão de Ativos de TI', en: 'IT Asset Management' },
+  'p3-desc':  { pt: 'API REST corporativa para gerenciamento de hardware, periféricos e licenças de software vinculados a funcionários. Com autenticação JWT e níveis de acesso (Admin/Usuário), logs de auditoria, links HATEOAS nas respostas e documentação interativa via Swagger. Em produção na nuvem.', en: 'Corporate REST API for managing hardware, peripherals and software licences linked to employees. Features JWT authentication with access levels (Admin/User), audit logs, HATEOAS links and interactive Swagger documentation. Live in production.' },
+  'p3-github': { pt: ' Ver no GitHub', en: ' View on GitHub' },
+  'p3-proj-type': { pt: 'Backend · Projeto Acadêmico', en: 'Backend · Academic Project' },
 
   'cta-title': { pt: 'Interessado em trabalhar comigo', en: 'Interested in working with me' },
   'cta-desc':  { pt: 'Posso ajudar no desenvolvimento do seu projeto ou ideia.', en: 'I can help bring your project or idea to life.' },
@@ -118,9 +129,7 @@ function applyTranslations(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (TRANSLATIONS[key] && TRANSLATIONS[key][lang] !== undefined) {
-      // Preserve inner <span> (used for the colored dot)
-      const span = el.querySelector('span');
-      if (span) {
+      if (el.children.length > 0) {
         el.childNodes.forEach(n => { if (n.nodeType === Node.TEXT_NODE && n.textContent.trim() !== '') n.textContent = TRANSLATIONS[key][lang]; });
       } else {
         el.textContent = TRANSLATIONS[key][lang];
@@ -139,7 +148,7 @@ function updateToggleBtn(lang) {
   const btn = document.getElementById('lang-toggle');
   if (!btn) return;
   btn.textContent = lang === 'pt' ? '🇺🇸 EN' : '🇧🇷 PT';
-  btn.title = lang === 'pt' ? 'Switch to English' : 'Mudar para Português';
+  btn.title = lang === 'pt' ? 'Switch to English' : 'Switch to Portuguese';
 }
 
 /* ─────────────────────────────────────────────
@@ -239,6 +248,11 @@ function tagElements() {
       cards[1].querySelector('p')?.setAttribute('data-i18n',  'proj2-desc');
       cards[1].querySelector('a')?.setAttribute('data-i18n',  'proj2-link');
     }
+    if (cards[2]) {
+      cards[2].querySelector('h3')?.setAttribute('data-i18n', 'proj3-title');
+      cards[2].querySelector('p')?.setAttribute('data-i18n',  'proj3-desc');
+      cards[2].querySelector('a')?.setAttribute('data-i18n',  'proj3-link');
+    }
 
     tag('.skills-title',    'section-skills');
     const skillCols = document.querySelectorAll('.skill-column');
@@ -279,7 +293,7 @@ function tagElements() {
   }
 
   // ── SOBRE ──
-  if (page === 'sobre.html') {
+  if (page === 'about.html') {
     tag('.hero-left h1',          'about-title');
     tag('.hero-descripition',     'about-desc');
     tag('.location-badge',        'about-location');
@@ -302,7 +316,7 @@ function tagElements() {
   }
 
   // ── PROJETOS ──
-  if (page === 'projetos.html') {
+  if (page === 'projects.html') {
     tag('.projects-hero h1', 'projects-page-title');
     tag('.projects-hero p',  'projects-page-sub');
 
@@ -310,17 +324,20 @@ function tagElements() {
     if (sections[0]) {
       sections[0].querySelector('h2')?.setAttribute('data-i18n', 'p1-title');
       sections[0].querySelector('.project-desc')?.setAttribute('data-i18n', 'p1-desc');
-      const metas = sections[0].querySelectorAll('.project-meta p');
-      if (metas[1]) metas[1].innerHTML = `<strong data-i18n-inner>Tipo:</strong> <span data-i18n="p1-type">${TRANSLATIONS['p1-type']['pt']}</span>`;
-      if (metas[2]) metas[2].innerHTML = `<strong>Cliente:</strong> -`;
+      sections[0].querySelector('.project-type')?.setAttribute('data-i18n', 'p1-proj-type');
       sections[0].querySelector('.btn-primary')?.setAttribute('data-i18n', 'p1-github');
     }
     if (sections[1]) {
       sections[1].querySelector('h2')?.setAttribute('data-i18n', 'p2-title');
       sections[1].querySelector('.project-desc')?.setAttribute('data-i18n', 'p2-desc');
-      const metas = sections[1].querySelectorAll('.project-meta p');
-      if (metas[1]) metas[1].innerHTML = `<strong>Tipo:</strong> <span data-i18n="p2-type">${TRANSLATIONS['p2-type']['pt']}</span>`;
+      sections[1].querySelector('.project-type')?.setAttribute('data-i18n', 'p2-proj-type');
       sections[1].querySelector('.btn-primary')?.setAttribute('data-i18n', 'p2-github');
+    }
+    if (sections[2]) {
+      sections[2].querySelector('h2')?.setAttribute('data-i18n', 'p3-title');
+      sections[2].querySelector('.project-desc')?.setAttribute('data-i18n', 'p3-desc');
+      sections[2].querySelector('.project-type')?.setAttribute('data-i18n', 'p3-proj-type');
+      sections[2].querySelector('.btn-primary')?.setAttribute('data-i18n', 'p3-github');
     }
 
     tag('.projects-cta h2',   'cta-title');
@@ -329,7 +346,7 @@ function tagElements() {
   }
 
   // ── CONTATO ──
-  if (page === 'contato.html') {
+  if (page === 'contact.html') {
     tag('.contact-title', 'contact-title');
     tag('.contact-desc',  'contact-desc');
   }
