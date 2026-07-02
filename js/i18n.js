@@ -12,8 +12,8 @@ const TRANSLATIONS = {
   'hero-greeting': { pt: 'Olá! Eu me chamo Rafael Gomes', en: "Hi! My name is Rafael Gomes" },
   'hero-title':    { pt: 'DESENVOLVEDOR EM FORMAÇÃO', en: 'DEVELOPER IN TRAINING' },
   'hero-desc':     {
-    pt: 'Estudante do 4º período de Engenharia da Computação na PUCPR e estagiário apaixonado por resolver problemas reais através de código. Com uma base sólida em C, tenho experiência prática no desenvolvimento de automações e na construção de APIs/backend utilizando Java e frameworks Python, como o Flask. No ecossistema Web, atuo com HTML, CSS e JavaScript, possuindo também vivência com React.js, Next.js e bancos de dados relacionais (MySQL)',
-    en: "4th-semester Computer Engineering student at PUCPR and an intern passionate about solving real problems through code. With a solid foundation in C, I have hands-on experience building automations and APIs/backend services using Java and Python frameworks like Flask. On the Web side, I work with HTML, CSS and JavaScript, and also have experience with React.js, Next.js and relational databases (MySQL)."
+    pt: 'Estudante do 4º período de Ciência da Computação na PUCPR e estagiário apaixonado por resolver problemas reais através de código. Com uma base sólida em C, tenho experiência prática no desenvolvimento de automações e na construção de APIs/backend utilizando Java e frameworks Python, como o Flask. No ecossistema Web, atuo com HTML, CSS e JavaScript, possuindo também vivência com React.js, Next.js e bancos de dados relacionais (MySQL)',
+    en: "4th-semester Computer Science student at PUCPR and an intern passionate about solving real problems through code. With a solid foundation in C, I have hands-on experience building automations and APIs/backend services using Java and Python frameworks like Flask. On the Web side, I work with HTML, CSS and JavaScript, and also have experience with React.js, Next.js and relational databases (MySQL)."
   },
   'hero-btn-projects': { pt: 'Ver projetos', en: 'View projects' },
   'hero-btn-cv':       { pt: 'Baixar Currículo', en: 'Download CV' },
@@ -72,13 +72,13 @@ const TRANSLATIONS = {
     en: "Currently I apply my knowledge directly in the industry as an intern in the Service Engineering area. Day to day I focus on turning repetitive processes into smart routines, developing Python automations and maintaining legacy systems and scripts (such as .bat files). This corporate experience taught me the importance of writing clean, efficient code that truly adds value to the business."
   },
   'about-location': { pt: '📍 Curitiba — Brasil 🇧🇷', en: '📍 Curitiba — Brazil 🇧🇷' },
-  'terminal-education': { pt: 'Engenharia da Computação - PUCPR', en: 'Computer Engineering - PUCPR' },
+  'terminal-education': { pt: 'Ciência da Computação - PUCPR', en: 'Computer Science - PUCPR' },
 
   'journey-title': { pt: 'Minha Jornada', en: 'My Journey' },
   'tl1-title': { pt: 'Início da faculdade', en: 'Started college' },
-  'tl1-desc':  { pt: 'Comecei a faculdade Engenharia da Computação e tive um primeiro contato com as principais linguagens de programação.', en: 'Started my Computer Engineering degree and had my first contact with the main programming languages.' },
+  'tl1-desc':  { pt: 'Comecei a faculdade de Ciência da Computação na PUCPR e tive meu primeiro contato com as principais linguagens de programação.', en: 'Started my Computer Science degree at PUCPR and had my first contact with the main programming languages.' },
   'tl2-title': { pt: 'Primeiro Estágio', en: 'First Internship' },
-  'tl2-desc':  { pt: 'Ao final do ano de 2024, consegui a oportunidade de começar em um primeiro estágio na área, na empresa POSITIVO TECNOLOGIA S/A, trabalhando e me aperfeiçoando em automações com Python.', en: 'By the end of 2024 I got the opportunity to start my first internship in the field at POSITIVO TECNOLOGIA S/A, working on and improving Python automations.' },
+  'tl2-desc':  { pt: 'Ao final do ano de 2024, consegui meu primeiro estágio na área, na empresa POSITIVO TECNOLOGIA S/A, trabalhando e me aperfeiçoando em automações com Python.', en: 'By the end of 2024 I landed my first internship in the field at POSITIVO TECNOLOGIA S/A, working on and improving Python automations.' },
   'tl3-title': { pt: 'Faculdade e mais faculdade', en: 'Deeper into college' },
   'tl3-desc':  { pt: 'Comecei a me aprofundar mais nas linguagens de programação na faculdade, como Python, Java e comecei a aplicá-las no trabalho e no meu dia a dia. Realizando alguns projetos mais trabalhosos.', en: 'I deepened my knowledge in programming languages such as Python and Java, and started applying them at work and in daily projects, including more complex assignments.' },
   'tl4-title': { pt: 'Aprofundamento em desenvolvimento WEB', en: 'Deep-dive into Web Development' },
@@ -104,6 +104,25 @@ const TRANSLATIONS = {
   'p3-desc':  { pt: 'API REST corporativa para gerenciamento de hardware, periféricos e licenças de software vinculados a funcionários. Com autenticação JWT e níveis de acesso (Admin/Usuário), logs de auditoria, links HATEOAS nas respostas e documentação interativa via Swagger. Em produção na nuvem.', en: 'Corporate REST API for managing hardware, peripherals and software licences linked to employees. Features JWT authentication with access levels (Admin/User), audit logs, HATEOAS links and interactive Swagger documentation. Live in production.' },
   'p3-github': { pt: ' Ver no GitHub', en: ' View on GitHub' },
   'p3-proj-type': { pt: 'Backend · Projeto Acadêmico', en: 'Backend · Academic Project' },
+
+  'p4-title':     { pt: 'F1 HUB — Plataforma de Estatísticas de Fórmula 1', en: 'F1 HUB — Formula 1 Statistics Platform' },
+  'p4-desc':      { pt: 'Aplicação web com calendário de corridas, classificações de pilotos e construtores, e perfis de pilotos, consumindo dados em tempo real de APIs públicas (OpenF1 e f1api.dev). Persistência de dados em PostgreSQL com ambiente containerizado via Docker.', en: 'Web application with race calendar, driver and constructor standings, and driver profiles, consuming real-time data from public APIs (OpenF1 and f1api.dev). Data persistence in PostgreSQL with a containerised environment via Docker.' },
+  'p4-github':    { pt: ' Ver no GitHub', en: ' View on GitHub' },
+  'p4-proj-type': { pt: 'Fullstack · Projeto Pessoal', en: 'Fullstack · Personal Project' },
+
+  'p5-title':     { pt: 'BRAINHUB — Rede Social Universitária', en: 'BRAINHUB — University Social Network' },
+  'p5-desc':      { pt: 'Rede social voltada ao público universitário, com autenticação, perfis, sistema de chat e busca global. Desenvolvida em parceria, com controle de acesso via Row Level Security no banco de dados.', en: 'Social network aimed at university students, with authentication, profiles, chat system and global search. Developed in partnership, with access control via Row Level Security in the database.' },
+  'p5-github':    { pt: ' Ver no GitHub', en: ' View on GitHub' },
+  'p5-proj-type': { pt: 'Fullstack · Projeto em Dupla', en: 'Fullstack · Pair Project' },
+
+  /* ── INDEX — Projects 4–5 (home cards) ── */
+  'proj4-title': { pt: 'F1 HUB', en: 'F1 HUB' },
+  'proj4-desc':  { pt: 'Plataforma de estatísticas de Fórmula 1 com calendário de corridas, classificações e perfis de pilotos, consumindo APIs públicas em tempo real.', en: 'Formula 1 statistics platform with race calendar, driver and constructor standings and driver profiles, consuming real-time public APIs.' },
+  'proj4-link':  { pt: ' Ver no GitHub', en: ' View on GitHub' },
+
+  'proj5-title': { pt: 'BRAINHUB', en: 'BRAINHUB' },
+  'proj5-desc':  { pt: 'Rede social universitária com autenticação, perfis, sistema de chat e busca global. Controle de acesso via Row Level Security.', en: 'University social network with authentication, profiles, chat system and global search. Access control via Row Level Security.' },
+  'proj5-link':  { pt: ' Ver no GitHub', en: ' View on GitHub' },
 
   'cta-title': { pt: 'Interessado em trabalhar comigo', en: 'Interested in working with me' },
   'cta-desc':  { pt: 'Posso ajudar no desenvolvimento do seu projeto ou ideia.', en: 'I can help bring your project or idea to life.' },
@@ -253,33 +272,18 @@ function tagElements() {
       cards[2].querySelector('p')?.setAttribute('data-i18n',  'proj3-desc');
       cards[2].querySelector('a')?.setAttribute('data-i18n',  'proj3-link');
     }
+    if (cards[3]) {
+      cards[3].querySelector('h3')?.setAttribute('data-i18n', 'proj4-title');
+      cards[3].querySelector('p')?.setAttribute('data-i18n',  'proj4-desc');
+      cards[3].querySelector('a')?.setAttribute('data-i18n',  'proj4-link');
+    }
+    if (cards[4]) {
+      cards[4].querySelector('h3')?.setAttribute('data-i18n', 'proj5-title');
+      cards[4].querySelector('p')?.setAttribute('data-i18n',  'proj5-desc');
+      cards[4].querySelector('a')?.setAttribute('data-i18n',  'proj5-link');
+    }
 
-    tag('.skills-title',    'section-skills');
-    const skillCols = document.querySelectorAll('.skill-column');
-    if (skillCols[0]) {
-      const lis = skillCols[0].querySelectorAll('li');
-      if (lis[4]) lis[4].setAttribute('data-i18n', 'skill-responsive');
-    }
-    if (skillCols[1]) {
-      const lis = skillCols[1].querySelectorAll('li');
-      if (lis[2]) lis[2].setAttribute('data-i18n', 'skill-api-dev');
-      if (lis[3]) lis[3].setAttribute('data-i18n', 'skill-apis');
-      if (lis[4]) lis[4].setAttribute('data-i18n', 'skill-automation');
-    }
-    if (skillCols[2]) {
-      skillCols[2].querySelector('h3')?.setAttribute('data-i18n', 'skill-db-title');
-      const lis = skillCols[2].querySelectorAll('li');
-      if (lis[2]) lis[2].setAttribute('data-i18n', 'skill-relational');
-      if (lis[4]) lis[4].setAttribute('data-i18n', 'skill-queries');
-    }
-    if (skillCols[3]) {
-      const lis = skillCols[3].querySelectorAll('li');
-      if (lis[0]) lis[0].setAttribute('data-i18n', 'skill-teamwork');
-      if (lis[1]) lis[1].setAttribute('data-i18n', 'skill-proactive');
-      if (lis[2]) lis[2].setAttribute('data-i18n', 'skill-comms');
-      if (lis[3]) lis[3].setAttribute('data-i18n', 'skill-org');
-      if (lis[4]) lis[4].setAttribute('data-i18n', 'skill-learning');
-    }
+    tag('.skills-title', 'section-skills');
 
     tag('.experiencia-title', 'section-exp');
     tag('.exp-role',   'exp-role');
@@ -338,6 +342,18 @@ function tagElements() {
       sections[2].querySelector('.project-desc')?.setAttribute('data-i18n', 'p3-desc');
       sections[2].querySelector('.project-type')?.setAttribute('data-i18n', 'p3-proj-type');
       sections[2].querySelector('.btn-primary')?.setAttribute('data-i18n', 'p3-github');
+    }
+    if (sections[3]) {
+      sections[3].querySelector('h2')?.setAttribute('data-i18n', 'p4-title');
+      sections[3].querySelector('.project-desc')?.setAttribute('data-i18n', 'p4-desc');
+      sections[3].querySelector('.project-type')?.setAttribute('data-i18n', 'p4-proj-type');
+      sections[3].querySelector('.btn-primary')?.setAttribute('data-i18n', 'p4-github');
+    }
+    if (sections[4]) {
+      sections[4].querySelector('h2')?.setAttribute('data-i18n', 'p5-title');
+      sections[4].querySelector('.project-desc')?.setAttribute('data-i18n', 'p5-desc');
+      sections[4].querySelector('.project-type')?.setAttribute('data-i18n', 'p5-proj-type');
+      sections[4].querySelector('.btn-primary')?.setAttribute('data-i18n', 'p5-github');
     }
 
     tag('.projects-cta h2',   'cta-title');
