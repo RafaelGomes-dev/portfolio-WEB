@@ -355,6 +355,22 @@ html {
   border-color: #5558f7;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-link-live {
+  background: #5558f7;
+  border-color: #5558f7;
+}
+
+.project-link-live:hover {
+  background: #3a28d9;
+  border-color: #3a28d9;
+}
+
 .projects-footer {
   text-align: center;
   margin-top: 52px;

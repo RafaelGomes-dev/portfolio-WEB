@@ -115,6 +115,12 @@ const TRANSLATIONS = {
   'p5-github':    { pt: ' Ver no GitHub', en: ' View on GitHub' },
   'p5-proj-type': { pt: 'Fullstack · Projeto em Dupla', en: 'Fullstack · Pair Project' },
 
+  'p6-title':     { pt: 'Dashboard de Vendas E-commerce', en: 'E-commerce Sales Dashboard' },
+  'p6-desc':      { pt: 'Dashboard interativo de análise de vendas com pipeline completo de dados: geração, tratamento (ETL) e visualização. Conta com KPIs, gráficos interativos e filtros dinâmicos em tempo real. Em produção na nuvem.', en: 'Interactive sales analytics dashboard with a full data pipeline: generation, processing (ETL) and visualization. Features KPIs, interactive charts and real-time dynamic filters. Live in production.' },
+  'p6-github':    { pt: ' Ver no GitHub', en: ' View on GitHub' },
+  'p6-live':      { pt: ' Ver ao vivo', en: ' View live' },
+  'p6-proj-type': { pt: 'Data Analytics · Projeto Pessoal', en: 'Data Analytics · Personal Project' },
+
   /* ── INDEX — Projects 4–5 (home cards) ── */
   'proj4-title': { pt: 'F1 HUB', en: 'F1 HUB' },
   'proj4-desc':  { pt: 'Plataforma de estatísticas de Fórmula 1 com calendário de corridas, classificações e perfis de pilotos, consumindo APIs públicas em tempo real.', en: 'Formula 1 statistics platform with race calendar, driver and constructor standings and driver profiles, consuming real-time public APIs.' },
@@ -123,6 +129,11 @@ const TRANSLATIONS = {
   'proj5-title': { pt: 'BRAINHUB', en: 'BRAINHUB' },
   'proj5-desc':  { pt: 'Rede social universitária com autenticação, perfis, sistema de chat e busca global. Controle de acesso via Row Level Security.', en: 'University social network with authentication, profiles, chat system and global search. Access control via Row Level Security.' },
   'proj5-link':  { pt: ' Ver no GitHub', en: ' View on GitHub' },
+
+  'proj6-title': { pt: 'Dashboard de Vendas E-commerce', en: 'E-commerce Sales Dashboard' },
+  'proj6-desc':  { pt: 'Dashboard interativo de análise de vendas com pipeline completo de dados: geração, tratamento (ETL) e visualização. KPIs, gráficos interativos e filtros dinâmicos em tempo real.', en: 'Interactive sales analytics dashboard with a full data pipeline: generation, processing (ETL) and visualization. KPIs, interactive charts and real-time dynamic filters.' },
+  'proj6-link':  { pt: ' Ver no GitHub', en: ' View on GitHub' },
+  'proj6-live':  { pt: ' Ver ao vivo', en: ' View live' },
 
   'cta-title': { pt: 'Interessado em trabalhar comigo', en: 'Interested in working with me' },
   'cta-desc':  { pt: 'Posso ajudar no desenvolvimento do seu projeto ou ideia.', en: 'I can help bring your project or idea to life.' },
@@ -282,6 +293,13 @@ function tagElements() {
       cards[4].querySelector('p')?.setAttribute('data-i18n',  'proj5-desc');
       cards[4].querySelector('a')?.setAttribute('data-i18n',  'proj5-link');
     }
+    if (cards[5]) {
+      cards[5].querySelector('h3')?.setAttribute('data-i18n', 'proj6-title');
+      cards[5].querySelector('p')?.setAttribute('data-i18n',  'proj6-desc');
+      const proj6Links = cards[5].querySelectorAll('a');
+      if (proj6Links[0]) proj6Links[0].setAttribute('data-i18n', 'proj6-link');
+      if (proj6Links[1]) proj6Links[1].setAttribute('data-i18n', 'proj6-live');
+    }
 
     tag('.skills-title', 'section-skills');
 
@@ -354,6 +372,13 @@ function tagElements() {
       sections[4].querySelector('.project-desc')?.setAttribute('data-i18n', 'p5-desc');
       sections[4].querySelector('.project-type')?.setAttribute('data-i18n', 'p5-proj-type');
       sections[4].querySelector('.btn-primary')?.setAttribute('data-i18n', 'p5-github');
+    }
+    if (sections[5]) {
+      sections[5].querySelector('h2')?.setAttribute('data-i18n', 'p6-title');
+      sections[5].querySelector('.project-desc')?.setAttribute('data-i18n', 'p6-desc');
+      sections[5].querySelector('.project-type')?.setAttribute('data-i18n', 'p6-proj-type');
+      sections[5].querySelector('.btn-primary')?.setAttribute('data-i18n', 'p6-github');
+      sections[5].querySelector('.btn-secondary')?.setAttribute('data-i18n', 'p6-live');
     }
 
     tag('.projects-cta h2',   'cta-title');
