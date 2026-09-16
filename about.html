@@ -1,137 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre — Rafael Gomes</title>
-    <meta name="description" content="Saiba mais sobre Rafael Gomes: estudante de Ciência da Computação na PUCPR, estagiário na Positivo Tecnologia e desenvolvedor full stack em formação.">
-    <meta property="og:title" content="Sobre — Rafael Gomes">
-    <meta property="og:description" content="Saiba mais sobre Rafael Gomes: estudante de Ciência da Computação na PUCPR, estagiário na Positivo Tecnologia e desenvolvedor full stack em formação.">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre — Rafael Gomes</title>
+  <meta name="description" content="Quem é Rafael Gomes: estudante de Ciência da Computação na PUCPR, estagiário em Engenharia de Serviços na Positivo Tecnologia e desenvolvedor full stack em formação.">
+  <meta name="theme-color" content="#050505">
+  <link rel="canonical" href="https://rafaelgomes-dev.github.io/portfolio-WEB/about.html">
+  <meta property="og:title" content="Sobre — Rafael Gomes">
+  <meta property="og:description" content="Estudante de Ciência da Computação na PUCPR, estagiário na Positivo Tecnologia e desenvolvedor full stack em formação.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://rafaelgomes-dev.github.io/portfolio-WEB/images/profile.jpg">
 
-    <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/about.css">
-    <script src="js/animations.js" defer></script>
-    <script src="js/i18n.js" defer></script>
-    <script src="js/navbar.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/about.css">
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 
-<body class="page-about">
+<body>
 
-    <nav class="navbar">
-        <h1 class="logo"><a href="index.html">RafaelDEV.</a></h1>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Principal">
+      <a href="index.html" class="logo">RafaelDEV.</a>
 
-        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
 
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projetos</a></li>
-            <li><a href="about.html">Sobre</a></li>
-            <li><a href="contact.html">Contato</a></li>
-        </ul>
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="projects.html" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="about.html" aria-current="page" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contato</a></li>
+        <li><button class="lang-toggle" id="lang-toggle" aria-label="Alternar idioma">EN</button></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- HERO SOBRE -->
+  <main>
 
-    <section class="about-hero">
-        <div class="hero-left">
+    <section class="about-hero container">
+      <div class="about-text">
+        <h1><span data-i18n="about.title">Sobre mim</span><span>.</span></h1>
+        <p class="about-desc" data-i18n="about.desc">
+          Aplico o que aprendo direto no mercado como estagiário em Engenharia de Serviços. No dia a dia, transformo processos repetitivos em rotinas inteligentes, desenvolvendo automações em Python e mantendo sistemas e scripts legados (como rotinas em .bat). Essa vivência corporativa me ensinou a escrever código limpo, eficiente e que realmente agrega valor ao negócio.
+        </p>
+        <span class="location"><i class="fa-solid fa-location-dot"></i><span data-i18n="about.location">Curitiba, Brasil</span></span>
+      </div>
 
-            <h1>Sobre mim<span>.</span></h1>
-
-            <p class="hero-descripition">
-                Atualmente, aplico meus conhecimentos diretamente no mercado como estagiário na área de Engenharia de
-                Serviços. No meu dia a dia, foco em transformar processos repetitivos em rotinas inteligentes,
-                desenvolvendo automações com Python e dando manutenção em sistemas e rotinas legadas (como scripts em
-                .bat). Essa vivência corporativa me ensinou a importância de criar códigos limpos, eficientes e que
-                realmente agregam valor ao negócio.
-            </p>
-
-            <div class="location-badge">
-                📍 Curitiba — Brasil 🇧🇷
-            </div>
-
+      <div class="terminal" aria-label="Resumo em formato de terminal">
+        <div class="terminal-bar"><span></span><span></span><span></span><em>rafael@dev</em></div>
+        <div class="terminal-body">
+          <p class="cmd">whoami</p>
+          <p class="out">Rafael Gomes</p>
+          <p class="cmd">role</p>
+          <p class="out" data-i18n="term.role">Desenvolvedor full stack em formação</p>
+          <p class="cmd">education</p>
+          <p class="out" data-i18n="term.education">Ciência da Computação — PUCPR</p>
+          <p class="cmd">status</p>
+          <p class="out ok" data-i18n="term.status">Disponível para oportunidades</p>
+          <p class="cmd cursor"></p>
         </div>
-
-        <!-- TERMINAL DEV -->
-
-        <div class="hero-terminal">
-
-            <div class="terminal-header">
-                <span><span><span></span></span></span>
-            </div>
-
-            <div class="terminal-body">
-                <p>> whoami</p>
-                <p class="highlight">Rafael Gomes</p>
-
-                <p>> role</p>
-                <p class="highlight">Developer in training</p>
-
-                <p>> education</p>
-                <p class="highlight">Ciência da Computação - PUCPR</p>
-
-                <p>> status</p>
-                <p class="highlight online">Available for opportunities</p>
-            </div>
-
-        </div>
+      </div>
     </section>
 
-    <!-- TIMELINE -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title"><span data-i18n="journey.title">Minha jornada</span><span>.</span></h2>
 
-    <section class="timeline">
-
-        <h2>Minha Jornada<span>.</span></h2>
-
-        <div class="timeline-container">
-
-            <div class="timeline-item">
-                <span class="year">2024</span>
-                <h3>Início da faculdade</h3>
-                <p>Comecei a faculdade de Ciência da Computação na PUCPR e tive meu primeiro contato com as principais linguagens de programação.</p>
-            </div>
-
-            <div class="timeline-item">
-                <span class="year">2024</span>
-                <h3>Primeiro Estágio</h3>
-                <p>Ao final do ano de 2024, consegui meu primeiro estágio na área, na empresa POSITIVO TECNOLOGIA S/A, trabalhando e me aperfeiçoando em automações com Python.</p>
-            </div>
-
-            <div class="timeline-item">
-                <span class="year">2025</span>
-                <h3>Faculdade e mais faculdade</h3>
-                <p>Comecei a me aprofundar mais nas linguagens de programação na faculdade, como Python e Java, e comecei a aplicá-las no trabalho e no meu dia a dia. Realizando alguns projetos mais trabalhosos.</p>
-            </div>
-
-            <div class="timeline-item">
-                <span class="year">2026</span>
-                <h3>Aprofundamento em desenvolvimento WEB </h3>
-                <p>Comecei a me interessar muito por desenvolvimento WEB tanto frontend e backend, aperfeiçoei meus
-                    conhecimentos
-                    e no momento me encontro aqui desenvolvendo projetos e buscando sempre oportunidades.
-                </p>
-            </div>
-
-
-
-
-
-        </div>
-
+        <ol class="timeline">
+          <li class="timeline-item">
+            <time>2024</time>
+            <h3 data-i18n="tl1.title">Início da faculdade</h3>
+            <p data-i18n="tl1.desc">Comecei Ciência da Computação na PUCPR e tive o primeiro contato com as principais linguagens de programação.</p>
+          </li>
+          <li class="timeline-item">
+            <time>2024</time>
+            <h3 data-i18n="tl2.title">Primeiro estágio</h3>
+            <p data-i18n="tl2.desc">No fim de 2024 consegui meu primeiro estágio na área, na Positivo Tecnologia, trabalhando com automações em Python.</p>
+          </li>
+          <li class="timeline-item">
+            <time>2025</time>
+            <h3 data-i18n="tl3.title">Aprofundando a base</h3>
+            <p data-i18n="tl3.desc">Me aprofundei em Python e Java na faculdade e passei a aplicá-los no trabalho e em projetos pessoais mais exigentes.</p>
+          </li>
+          <li class="timeline-item">
+            <time>2026</time>
+            <h3 data-i18n="tl4.title">Foco em desenvolvimento web</h3>
+            <p data-i18n="tl4.desc">Mergulhei em desenvolvimento web, frontend e backend. Hoje estou aqui construindo projetos e buscando novas oportunidades.</p>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <p>© 2026 Rafael Gomes — Todos os direitos reservados</p>
-    </footer>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-i18n="footer">© 2026 Rafael Gomes</p>
+      <nav aria-label="Rodapé">
+        <a href="https://github.com/RafaelGomes-dev" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/rafael-gomes-1b91a6280" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:rafinhagomes1231@gmail.com">E-mail</a>
+      </nav>
+    </div>
+  </footer>
 
 </body>
-
 </html>

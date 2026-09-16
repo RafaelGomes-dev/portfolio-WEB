@@ -1,425 +1,298 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafael Gomes — Desenvolvedor Full Stack</title>
-    <meta name="description" content="Portfolio de Rafael Gomes, desenvolvedor full stack com experiência em Python, Flask, Java e desenvolvimento web. Estudante de Ciência da Computação na PUCPR.">
-    <meta property="og:title" content="Rafael Gomes — Desenvolvedor Full Stack">
-    <meta property="og:description" content="Projetos, skills e experiências de Rafael Gomes, estagiário na Positivo Tecnologia e desenvolvedor apaixonado por resolver problemas com código.">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafael Gomes — Desenvolvedor Full Stack</title>
+  <meta name="description" content="Portfólio de Rafael Gomes, desenvolvedor full stack em formação. Java/Spring Boot, Python/Flask, Next.js e bancos relacionais. Estudante de Ciência da Computação na PUCPR.">
+  <meta name="theme-color" content="#050505">
+  <link rel="canonical" href="https://rafaelgomes-dev.github.io/portfolio-WEB/">
+  <meta property="og:title" content="Rafael Gomes — Desenvolvedor Full Stack">
+  <meta property="og:description" content="Projetos, skills e experiência de Rafael Gomes, estagiário na Positivo Tecnologia e desenvolvedor em formação.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rafaelgomes-dev.github.io/portfolio-WEB/">
+  <meta property="og:image" content="https://rafaelgomes-dev.github.io/portfolio-WEB/images/profile.jpg">
 
-    <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="css/home.css">
-    <script src="js/animations.js" defer></script>
-    <script src="js/i18n.js" defer></script>
-    <script src="js/navbar.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 
+<body>
 
-<body class="page-home">
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Principal">
+      <a href="index.html" class="logo">RafaelDEV.</a>
 
-    <!-- ===== NAVBAR ===== -->
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
 
-    <header>
-        <nav class="navbar">
-            <h1 class="logo"><a href="index.html">RafaelDEV.</a></h1>
+      <ul class="menu" id="menu">
+        <li><a href="index.html" aria-current="page" data-i18n="nav.home">Home</a></li>
+        <li><a href="projects.html" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contato</a></li>
+        <li><button class="lang-toggle" id="lang-toggle" aria-label="Alternar idioma">EN</button></li>
+      </ul>
+    </nav>
+  </header>
 
-            <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <main>
 
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projetos</a></li>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="contact.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- ===== SOBRE ===== -->
-
-    <section class="hero">
-
-        <div class="hero-text">
-            <h3>Olá! Eu me chamo Rafael Gomes</h3>
-            <h1>DESENVOLVEDOR EM FORMAÇÃO</h1>
-            <p>Estudante do 5º período de Ciência da Computação na PUCPR e estagiário apaixonado por resolver
-                problemas reais através de código. Com uma base sólida em C, tenho experiência prática no
-                desenvolvimento de automações e na construção de APIs/backend utilizando Java e frameworks Python, como
-                o Flask. No ecossistema Web, atuo com HTML, CSS e JavaScript, possuindo também vivência com React.js,
-                Next.js e bancos de dados relacionais (MySQL)
-            </p>
-
-            <div class="hero-botoes">
-                <a href="projects.html" class="btn">Ver projetos </a>
-
-                <a href="docs/curriculo_rafael_gomes.pdf" download="Rafael-Gomes-CV.pdf"
-                    class="btn btn-outline">Baixar
-                    Currículo</a>
-
-            </div>
+    <section class="hero container">
+      <div class="hero-text">
+        <span class="status-pill" data-i18n="hero.status">Disponível para oportunidades</span>
+        <p class="hero-greeting" data-i18n="hero.greeting">Olá, eu sou Rafael Gomes</p>
+        <h1 class="hero-title" data-i18n="hero.title">Desenvolvedor full stack <em>em formação</em></h1>
+        <p class="hero-desc" data-i18n="hero.desc">
+          Estudante do 5º período de Ciência da Computação na PUCPR e estagiário em Engenharia de Serviços na Positivo Tecnologia. Construo APIs com Java/Spring Boot e Python/Flask, automações e interfaces web com React e Next.js, sempre com bancos relacionais por trás.
+        </p>
+        <div class="hero-actions">
+          <a href="projects.html" class="btn" data-i18n="hero.cta.projects">Ver projetos</a>
+          <a href="docs/curriculo_rafael_gomes.pdf" download="Rafael-Gomes-CV.pdf" class="btn btn-outline">
+            <i class="fa-solid fa-download"></i><span data-i18n="hero.cta.cv">Baixar currículo</span>
+          </a>
         </div>
+      </div>
 
-        <div class="hero-img">
-            <div class="hero-photo-ring">
-                <img src="images/profile.png" alt="Rafael Gomes">
-            </div>
+      <div class="hero-visual">
+        <div class="photo-ring">
+          <img src="images/profile.jpg" alt="Foto de Rafael Gomes" width="800" height="800" fetchpriority="high">
         </div>
+      </div>
     </section>
 
-    <!-- ===== PROJETOS ===== -->
-    <section id="projetos" class="section projects-section">
-
-        <div class="projects-header">
-            <h2 class="projects-title">Projetos<span>.</span></h2>
-            <a href="projects.html" class="projects-see-all">Ver todos →</a>
+    <section id="projetos" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title"><span data-i18n="projects.title">Projetos</span><span>.</span></h2>
+          <a href="projects.html" class="link-arrow" data-i18n="projects.seeAll">Ver todos</a>
         </div>
 
         <div class="projects-grid">
 
-            <!-- PROJETO 1 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/expense-4.png" alt="Gestão de Gastos">
-                    <div class="project-overlay">
-                        <span class="project-num">01</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Gestão de Gastos</h3>
-                    <p>Aplicação fullstack de controle financeiro com autenticação segura, painel responsivo e hospedagem em nuvem.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>SQLite</span>
-                    </div>
-                    <a href="https://github.com/RafaelGomes-dev/controle-gastos" class="project-link" target="_blank">
-                        <i class="fa-brands fa-github"></i> Ver no GitHub
-                    </a>
-                </div>
+          <article class="project-card">
+            <div class="project-media" data-placeholder="Screenshot em breve">
+              <img src="images/expense-4.png" alt="Painel do sistema Gestão de Gastos" loading="lazy">
+              <span class="project-kind" data-i18n="kind.personal">Projeto pessoal</span>
             </div>
+            <div class="project-body">
+              <h3 data-i18n="p1.title">Gestão de Gastos</h3>
+              <p data-i18n="p1.short">Aplicação fullstack de controle financeiro com autenticação segura, painel responsivo e hospedagem em nuvem.</p>
+              <div class="tags"><span>Python</span><span>Flask</span><span>SQLite</span></div>
+              <div class="project-actions">
+                <a href="https://github.com/RafaelGomes-dev/controle-gastos" class="btn btn-ghost btn-sm" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span data-i18n="btn.github">GitHub</span></a>
+                <a href="https://controle-gastos-74h4.onrender.com/" class="btn btn-sm" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i><span data-i18n="btn.live">Ver ao vivo</span></a>
+              </div>
+            </div>
+          </article>
 
-            <!-- PROJETO 2 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/bot-1.png" alt="Bot Discord COD">
-                    <div class="project-overlay">
-                        <span class="project-num">02</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Bot Discord — COD</h3>
-                    <p>Bot com status de servidores em tempo real, meta de armas, ranking com banco de dados e notificações automáticas.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>discord.py</span>
-                        <span>SQLite</span>
-                    </div>
-                    <a href="https://github.com/RafaelGomes-dev/bot-discord-cod" class="project-link" target="_blank">
-                        <i class="fa-brands fa-github"></i> Ver no GitHub
-                    </a>
-                </div>
+          <article class="project-card">
+            <div class="project-media" data-placeholder="Screenshot em breve">
+              <img src="images/bot-1.png" alt="Bot do Discord para Call of Duty" loading="lazy">
+              <span class="project-kind" data-i18n="kind.personal">Projeto pessoal</span>
             </div>
+            <div class="project-body">
+              <h3 data-i18n="p2.title">Bot Discord — Call of Duty</h3>
+              <p data-i18n="p2.short">Status de servidores em tempo real, meta de armas, ranking com banco de dados e notificações automáticas.</p>
+              <div class="tags"><span>Python</span><span>discord.py</span><span>SQLite</span></div>
+              <div class="project-actions">
+                <a href="https://github.com/RafaelGomes-dev/bot-discord-cod" class="btn btn-ghost btn-sm" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span data-i18n="btn.github">GitHub</span></a>
+                <a href="https://discord.gg/azNtmswJ" class="btn btn-sm" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i>Discord</a>
+              </div>
+            </div>
+          </article>
 
-            <!-- PROJETO 3 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/it-assets-1.png" alt="Gestão de Ativos de TI">
-                    <div class="project-overlay">
-                        <span class="project-num">03</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Gestão de Ativos de TI</h3>
-                    <p>API REST com JWT, HATEOAS e Swagger para gerenciamento de hardware e licenças vinculadas a funcionários.</p>
-                    <div class="project-tags">
-                        <span>Java</span>
-                        <span>Spring Boot</span>
-                        <span>PostgreSQL</span>
-                    </div>
-                    <a href="https://github.com/RafaelGomes-dev/gestao-ati" class="project-link" target="_blank">
-                        <i class="fa-brands fa-github"></i> Ver no GitHub
-                    </a>
-                </div>
+          <article class="project-card">
+            <div class="project-media" data-placeholder="Screenshot em breve">
+              <img src="images/it-assets-1.png" alt="Documentação Swagger da API de ativos de TI" loading="lazy">
+              <span class="project-kind" data-i18n="kind.academic">Projeto acadêmico</span>
             </div>
+            <div class="project-body">
+              <h3 data-i18n="p3.title">Gestão de Ativos de TI</h3>
+              <p data-i18n="p3.short">API REST com JWT, HATEOAS e Swagger para gerenciar hardware e licenças vinculadas a funcionários.</p>
+              <div class="tags"><span>Java</span><span>Spring Boot</span><span>PostgreSQL</span></div>
+              <div class="project-actions">
+                <a href="https://github.com/RafaelGomes-dev/gestao-ati" class="btn btn-ghost btn-sm" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span data-i18n="btn.github">GitHub</span></a>
+                <a href="https://gestao-ati-production.up.railway.app/swagger-ui/index.html" class="btn btn-sm" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i>Swagger</a>
+              </div>
+            </div>
+          </article>
 
-            <!-- PROJETO 4 — F1 HUB -->
-            <!-- Imagem: adicione o screenshot em images/f1hub-1.png -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/f1hub-1.png" alt="F1 HUB">
-                    <div class="project-overlay">
-                        <span class="project-num">04</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>F1 HUB</h3>
-                    <p>Plataforma de estatísticas de Fórmula 1 com calendário de corridas, classificações e perfis de pilotos, consumindo APIs públicas em tempo real.</p>
-                    <div class="project-tags">
-                        <span>Next.js</span>
-                        <span>TypeScript</span>
-                        <span>PostgreSQL</span>
-                        <span>Docker</span>
-                    </div>
-                    <a href="#" class="project-link" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-github"></i> Ver no GitHub
-                    </a>
-                </div>
+          <article class="project-card">
+            <div class="project-media" data-placeholder="Screenshot em breve">
+              <img src="images/f1hub-1.png" alt="Plataforma F1 HUB" loading="lazy">
+              <span class="project-kind" data-i18n="kind.personal">Projeto pessoal</span>
             </div>
+            <div class="project-body">
+              <h3>F1 HUB</h3>
+              <p data-i18n="p4.short">Estatísticas de Fórmula 1 com calendário, classificações e perfis de pilotos, consumindo APIs públicas em tempo real.</p>
+              <div class="tags"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Docker</span></div>
+              <div class="project-actions">
+                <a href="#" class="btn btn-ghost btn-sm" aria-disabled="true"><i class="fa-brands fa-github"></i><span data-i18n="btn.soon">Repositório em breve</span></a>
+              </div>
+            </div>
+          </article>
 
-            <!-- PROJETO 5 — BRAINHUB -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/brainhub-1.png" alt="BrainHub">
-                    <div class="project-overlay">
-                        <span class="project-num">05</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>BRAINHUB</h3>
-                    <p>Rede social universitária com autenticação, perfis, sistema de chat e busca global. Controle de acesso via Row Level Security.</p>
-                    <div class="project-tags">
-                        <span>Next.js</span>
-                        <span>Supabase</span>
-                        <span>PostgreSQL</span>
-                    </div>
-                    <a href="#" class="project-link" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-github"></i> Ver no GitHub
-                    </a>
-                </div>
+          <article class="project-card">
+            <div class="project-media" data-placeholder="Screenshot em breve">
+              <img src="images/brainhub-1.png" alt="Feed da rede social BrainHub" loading="lazy">
+              <span class="project-kind" data-i18n="kind.pair">Projeto em dupla</span>
             </div>
+            <div class="project-body">
+              <h3>BrainHub</h3>
+              <p data-i18n="p5.short">Rede social universitária com autenticação, perfis, chat e busca global. Controle de acesso via Row Level Security.</p>
+              <div class="tags"><span>Next.js</span><span>Supabase</span><span>PostgreSQL</span></div>
+              <div class="project-actions">
+                <a href="#" class="btn btn-ghost btn-sm" aria-disabled="true"><i class="fa-brands fa-github"></i><span data-i18n="btn.soon">Repositório em breve</span></a>
+              </div>
+            </div>
+          </article>
 
-            <!-- PROJETO 6 — DASHBOARD DE VENDAS E-COMMERCE -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/dashboard-1.png" alt="Dashboard de Vendas E-commerce">
-                    <div class="project-overlay">
-                        <span class="project-num">06</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <h3>Dashboard de Vendas E-commerce</h3>
-                    <p>Dashboard interativo de análise de vendas com pipeline completo de dados: geração, tratamento (ETL) e visualização. KPIs, gráficos interativos e filtros dinâmicos em tempo real.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Pandas</span>
-                        <span>Streamlit</span>
-                        <span>Plotly</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/RafaelGomes-dev/dashboard-vendas-streamlit" class="project-link" target="_blank">
-                            <i class="fa-brands fa-github"></i> Ver no GitHub
-                        </a>
-                        <a href="https://dashboard-vendas-app-2fztakyrenfvx6t2qspqvx.streamlit.app/" class="project-link project-link-live" target="_blank" rel="noopener">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ao vivo
-                        </a>
-                    </div>
-                </div>
+          <article class="project-card">
+            <div class="project-media" data-placeholder="Screenshot em breve">
+              <img src="images/dashboard-1.png" alt="Dashboard de vendas em Streamlit" loading="lazy">
+              <span class="project-kind" data-i18n="kind.personal">Projeto pessoal</span>
             </div>
+            <div class="project-body">
+              <h3 data-i18n="p6.title">Dashboard de Vendas E-commerce</h3>
+              <p data-i18n="p6.short">Pipeline completo de dados (geração, ETL e visualização) com KPIs, gráficos interativos e filtros dinâmicos.</p>
+              <div class="tags"><span>Python</span><span>Pandas</span><span>Streamlit</span><span>Plotly</span></div>
+              <div class="project-actions">
+                <a href="https://github.com/RafaelGomes-dev/dashboard-vendas-streamlit" class="btn btn-ghost btn-sm" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span data-i18n="btn.github">GitHub</span></a>
+                <a href="https://dashboard-vendas-app-2fztakyrenfvx6t2qspqvx.streamlit.app/" class="btn btn-sm" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i><span data-i18n="btn.live">Ver ao vivo</span></a>
+              </div>
+            </div>
+          </article>
 
         </div>
 
         <div class="projects-footer">
-            <a href="projects.html" class="btn">Ver todos os projetos →</a>
+          <a href="projects.html" class="btn btn-outline" data-i18n="projects.all">Ver todos os projetos</a>
         </div>
-
+      </div>
     </section>
 
-    <!-- ===== SKILLS ===== -->
-    <section id="skills" class="section skills-section">
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills<span>.</span></h2>
 
-        <h2 class="skills-title">Skills<span>.</span></h2>
+        <div class="skills-groups">
 
-        <div class="skills-icons-grid">
-
-            <div class="skill-badge">
-                <i class="devicon-html5-plain colored"></i>
-                <span>HTML5</span>
+          <div class="skill-group">
+            <h3 data-i18n="skills.frontend">Frontend</h3>
+            <div class="skills-row">
+              <div class="skill-badge"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+              <div class="skill-badge"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+              <div class="skill-badge"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+              <div class="skill-badge"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+              <div class="skill-badge"><i class="devicon-react-original colored"></i><span>React</span></div>
+              <div class="skill-badge"><i class="devicon-nextjs-plain"></i><span>Next.js</span></div>
             </div>
+          </div>
 
-            <div class="skill-badge">
-                <i class="devicon-css3-plain colored"></i>
-                <span>CSS3</span>
+          <div class="skill-group">
+            <h3 data-i18n="skills.backend">Backend</h3>
+            <div class="skills-row">
+              <div class="skill-badge"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+              <div class="skill-badge"><i class="devicon-spring-original colored"></i><span>Spring Boot</span></div>
+              <div class="skill-badge"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+              <div class="skill-badge"><i class="devicon-flask-original"></i><span>Flask</span></div>
             </div>
+          </div>
 
-            <div class="skill-badge">
-                <i class="devicon-javascript-plain colored"></i>
-                <span>JavaScript</span>
+          <div class="skill-group">
+            <h3 data-i18n="skills.data">Dados e ferramentas</h3>
+            <div class="skills-row">
+              <div class="skill-badge"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+              <div class="skill-badge"><i class="devicon-mysql-original colored"></i><span>MySQL</span></div>
+              <div class="skill-badge"><i class="devicon-sqlite-plain colored"></i><span>SQLite</span></div>
+              <div class="skill-badge"><i class="devicon-supabase-plain colored"></i><span>Supabase</span></div>
+              <div class="skill-badge"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+              <div class="skill-badge"><i class="devicon-git-plain colored"></i><span>Git</span></div>
             </div>
-
-            <div class="skill-badge">
-                <i class="devicon-react-original colored"></i>
-                <span>React.js</span>
-            </div>
-
-            <div class="skill-badge">
-                <i class="devicon-nextjs-plain"></i>
-                <span>Next.js</span>
-            </div>
-
-            <div class="skill-badge">
-                <i class="devicon-python-plain colored"></i>
-                <span>Python</span>
-            </div>
-
-            <div class="skill-badge">
-                <i class="devicon-flask-original"></i>
-                <span>Flask</span>
-            </div>
-
-            <div class="skill-badge">
-                <i class="devicon-java-plain colored"></i>
-                <span>Java</span>
-            </div>
-
-            <div class="skill-badge">
-                <i class="devicon-mysql-plain colored"></i>
-                <span>MySQL</span>
-            </div>
-
-            <div class="skill-badge">
-                <i class="devicon-postgresql-plain colored"></i>
-                <span>PostgreSQL</span>
-            </div>
-
-            <div class="skill-badge">
-                <i class="devicon-sqlite-plain colored"></i>
-                <span>SQLite</span>
-            </div>
-
-            <div class="skill-badge">
-                <i class="devicon-git-plain colored"></i>
-                <span>Git</span>
-            </div>
-
-            <div class="skill-badge">
-                <i class="devicon-typescript-plain colored"></i>
-                <span>TypeScript</span>
-            </div>
-
-            <div class="skill-badge">
-                <i class="devicon-spring-plain colored"></i>
-                <span>Spring Boot</span>
-            </div>
-
-            <div class="skill-badge">
-                <i class="devicon-docker-plain colored"></i>
-                <span>Docker</span>
-            </div>
-
-            <div class="skill-badge">
-                <i class="devicon-supabase-plain colored"></i>
-                <span>Supabase</span>
-            </div>
+          </div>
 
         </div>
-
+      </div>
     </section>
 
-    <!-- ===== EXPERIÊNCIAS ===== -->
     <section id="experiencias" class="section">
+      <div class="container">
+        <h2 class="section-title"><span data-i18n="exp.title">Experiência</span><span>.</span></h2>
 
-
-        <h2 class="experiencia-title">Experiências<span>.</span></h2>
-
-        <div class="exp-container">
-
-            <details class="exp-item" open>
-                <summary>
-                    <div>
-                        <h3 class="exp-company">POSITIVO TECNOLOGIA S/A</h3>
-                        <p class="exp-role">Estagiário </p>
-                    </div>
-                    <span class="exp-arrow">▲</span>
-                </summary>
-
-                <div class="exp-content">
-                    <p class="exp-periodo">Período — Nov 2024 · Presente</p>
-
-                    <ul class="exp-list">
-                        <li>Automação de tarefas com Python</li>
-                        <li>Manutenção de Sistemas Legados</li>
-                        <li>Engenharia de Serviços</li>
-                        <li>Troubleshooting</li>
-                        <li>Suporte ao Cliente</li>
-                    </ul>
-                </div>
-            </details>
-
+        <div class="exp-list">
+          <details class="exp-item" open>
+            <summary>
+              <div>
+                <h3 class="exp-company">Positivo Tecnologia</h3>
+                <p class="exp-role" data-i18n="exp.role">Estagiário em Engenharia de Serviços</p>
+              </div>
+              <span class="exp-period" data-i18n="exp.period">Nov 2024 — atual</span>
+              <span class="exp-chevron"><i class="fa-solid fa-chevron-down"></i></span>
+            </summary>
+            <div class="exp-body">
+              <ul>
+                <li data-i18n="exp.li1">Automação de tarefas com Python</li>
+                <li data-i18n="exp.li2">Manutenção de sistemas legados</li>
+                <li data-i18n="exp.li3">Engenharia de serviços</li>
+                <li data-i18n="exp.li4">Troubleshooting</li>
+                <li data-i18n="exp.li5">Suporte ao cliente</li>
+              </ul>
+            </div>
+          </details>
         </div>
+      </div>
     </section>
 
-
-
-    <!-- ===== CONTATO ===== -->
-    <section id="contato" class="section contact-section">
-
-        <div class="contact-container">
-
-            <!-- TEXTO ESQUERDA -->
-            <div class="contact-text">
-
-                <h2 class="contact-title">
-                    Vamos conversar<span>.</span>
-                </h2>
-
-                <p class="contact-desc">
-                    Quer trabalhar comigo, tirar dúvidas ou discutir um projeto?
-                    Entre em contato e responderei o mais rápido possível.
-                </p>
-
-                <div class="contact-info">
-
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                        <a href="mailto:rafinhagomes1231@gmail.com">rafinhagomes1231@gmail.com</a>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
-                        <a href="https://wa.me/5541998123937" target="_blank">+55 (41) 99812-3937</a>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
-                        <a href="https://github.com/RafaelGomes-dev" target="_blank">github.com/RafaelGomes-dev</a>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
-                        <a href="https://www.linkedin.com/in/rafael-gomes-1b91a6280" target="_blank">linkedin.com/in/rafael-gomes</a>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- FOTO DIREITA -->
-            <div class="contact-photo">
-
-                <div class="hero-img">
-                    <div class="hero-photo-ring">
-                        <img src="images/profile.png" alt="Rafael Gomes">
-                    </div>
-                </div>
-
-            </div>
-
+    <section id="contato" class="section">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title"><span data-i18n="contact.title">Vamos conversar</span><span>.</span></h2>
+          <p class="contact-desc" data-i18n="contact.desc">Quer trabalhar comigo, tirar dúvidas ou discutir um projeto? Me chama por qualquer canal e respondo o mais rápido possível.</p>
         </div>
 
+        <div class="contact-list">
+          <a href="mailto:rafinhagomes1231@gmail.com" class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <div><small>E-mail</small><strong>rafinhagomes1231@gmail.com</strong></div>
+          </a>
+          <a href="https://wa.me/5541998123937" class="contact-card" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div><small>WhatsApp</small><strong>+55 (41) 99812-3937</strong></div>
+          </a>
+          <a href="https://github.com/RafaelGomes-dev" class="contact-card" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+            <div><small>GitHub</small><strong>RafaelGomes-dev</strong></div>
+          </a>
+          <a href="https://www.linkedin.com/in/rafael-gomes-1b91a6280" class="contact-card" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <div><small>LinkedIn</small><strong>rafael-gomes</strong></div>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <p>© 2026 Rafael Gomes — Todos os direitos reservados</p>
-    </footer>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p data-i18n="footer">© 2026 Rafael Gomes</p>
+      <nav aria-label="Rodapé">
+        <a href="https://github.com/RafaelGomes-dev" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/rafael-gomes-1b91a6280" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:rafinhagomes1231@gmail.com">E-mail</a>
+      </nav>
+    </div>
+  </footer>
 
 </body>
 </html>

@@ -1,406 +1,227 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos — Rafael Gomes</title>
-    <meta name="description" content="Projetos desenvolvidos por Rafael Gomes: sistema de controle de gastos fullstack com Flask e bot para Discord em Python.">
-    <meta property="og:title" content="Projetos — Rafael Gomes">
-    <meta property="og:description" content="Projetos desenvolvidos por Rafael Gomes: sistema de controle de gastos fullstack com Flask e bot para Discord em Python.">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos — Rafael Gomes</title>
+  <meta name="description" content="Projetos de Rafael Gomes: APIs em Java/Spring Boot, apps fullstack com Flask e Next.js, bot para Discord e dashboard de dados em Streamlit.">
+  <meta name="theme-color" content="#050505">
+  <link rel="canonical" href="https://rafaelgomes-dev.github.io/portfolio-WEB/projects.html">
+  <meta property="og:title" content="Projetos — Rafael Gomes">
+  <meta property="og:description" content="APIs em Java/Spring Boot, apps fullstack com Flask e Next.js, bot para Discord e dashboard de dados em Streamlit.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://rafaelgomes-dev.github.io/portfolio-WEB/images/profile.jpg">
 
-    <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/projects.css">
-    <script src="js/animations.js" defer></script>
-    <script src="js/i18n.js" defer></script>
-    <script src="js/navbar.js" defer></script>
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/carousel.js" defer></script>
 </head>
 
-<body class="page-projects">
+<body>
 
-    <nav class="navbar">
-        <h1 class="logo"><a href="index.html">RafaelDEV.</a></h1>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Principal">
+      <a href="index.html" class="logo">RafaelDEV.</a>
 
-        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
 
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projetos</a></li>
-            <li><a href="about.html">Sobre</a></li>
-            <li><a href="contact.html">Contato</a></li>
-        </ul>
+      <ul class="menu" id="menu">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="projects.html" aria-current="page" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="about.html" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contato</a></li>
+        <li><button class="lang-toggle" id="lang-toggle" aria-label="Alternar idioma">EN</button></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- HEADER DA PÁGINA -->
+  <main>
 
-    <section class="projects-hero">
-
-        <h1>Projetos<span>.</span></h1>
-        <p>Alguns dos trabalhos e aplicações que desenvolvi.</p>
-
+    <section class="page-hero container">
+      <h1><span data-i18n="projects.title">Projetos</span><span>.</span></h1>
+      <p data-i18n="projects.page.sub">Algumas das coisas que construí, em produção ou em andamento.</p>
     </section>
 
-    <!-- PROJETO 1 -->
+    <div class="project-list container">
 
-    <section class="project">
-
-        <div class="project-container">
-
-            <div class="project-image">
-
-                <div class="carousel">
-
-                    <button class="carousel-btn prev">❮</button>
-
-                    <div class="carousel-track">
-
-                        <img src="images/expense-1.png" class="carousel-img active">
-                        <img src="images/expense-2.png" class="carousel-img">
-                        <img src="images/expense-3.png" class="carousel-img">
-                        <img src="images/expense-4.png" class="carousel-img">
-
-                    </div>
-
-                    <button class="carousel-btn next">❯</button>
-
-                    <div class="carousel-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-
-                </div>
+      <article class="project-row">
+        <div class="project-media-wrap">
+          <div class="carousel" aria-roledescription="carrossel" aria-label="Imagens do projeto Gestão de Gastos">
+            <button class="carousel-btn prev" type="button" aria-label="Imagem anterior"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carousel-track">
+              <img src="images/expense-1.png" class="is-active" alt="Tela de login do sistema de gastos" loading="lazy">
+              <img src="images/expense-2.png" alt="Dashboard com resumo financeiro" loading="lazy">
+              <img src="images/expense-3.png" alt="Lista de transações" loading="lazy">
+              <img src="images/expense-4.png" alt="Gráficos de gastos por categoria" loading="lazy">
             </div>
-
-            <div class="project-info">
-
-                <span class="project-index">01</span>
-                <h2>Sistema de Controle de Gastos</h2>
-                <span class="project-type">Fullstack · Projeto Pessoal</span>
-
-                <p class="project-desc">
-                    Aplicação web fullstack desenvolvida em Python com Flask. Oferece um painel completo para gestão financeira pessoal, com banco de dados relacional, autenticação segura com senhas criptografadas, interface totalmente responsiva e dados isolados por usuário. Em produção na nuvem.
-                </p>
-
-                <div class="project-tech-tags">
-                    <span>Python</span>
-                    <span>Flask</span>
-                    <span>SQLite</span>
-                    <span>SQLAlchemy</span>
-                    <span>Bootstrap 5</span>
-                    <span>Jinja2</span>
-                </div>
-
-                <div class="project-buttons">
-                    <a href="https://github.com/RafaelGomes-dev/controle-gastos" class="btn-primary"><i class="fa-brands fa-github"></i> Ver no GitHub</a>
-                    <a href="https://controle-gastos-74h4.onrender.com/" class="btn-secondary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
-                </div>
-
-            </div>
-
+            <button class="carousel-btn next" type="button" aria-label="Próxima imagem"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
+          </div>
         </div>
-
-    </section>
-
-    <!-- PROJETO 2 -->
-
-    <section class="project alt">
-
-        <div class="project-container">
-
-            <div class="project-image">
-
-                <div class="carousel">
-
-                    <button class="carousel-btn prev">❮</button>
-
-                    <div class="carousel-track">
-
-                        <img src="images/bot-2.png" class="carousel-img active">
-                        <img src="images/bot-3.png" class="carousel-img">
-                        <img src="images/bot-4.png" class="carousel-img">
-                        <img src="images/bot-5.png" class="carousel-img">
-
-                    </div>
-
-                    <button class="carousel-btn next">❯</button>
-
-                    <div class="carousel-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="project-info">
-
-                <span class="project-index">02</span>
-                <h2>Bot do Meta — Discord COD</h2>
-                <span class="project-type">Bot · Automação · Projeto Pessoal</span>
-
-                <p class="project-desc">
-                    Bot para Discord voltado a jogadores de Call of Duty, desenvolvido em Python. Consulta status de servidores em tempo real via web scraping, exibe meta de armas atualizado, ranking com banco de dados SQLite, enquetes, sorteios e notificações automáticas. Em produção na nuvem.
-                </p>
-
-                <div class="project-tech-tags">
-                    <span>Python</span>
-                    <span>discord.py</span>
-                    <span>SQLite</span>
-                    <span>aiohttp</span>
-                    <span>BeautifulSoup4</span>
-                </div>
-
-                <div class="project-buttons">
-                    <a href="https://github.com/RafaelGomes-dev/bot-discord-cod" class="btn-primary"><i class="fa-brands fa-github"></i> Ver no GitHub</a>
-                    <a href="https://discord.gg/azNtmswJ" class="btn-secondary"><i class="fa-brands fa-discord"></i> Demo</a>
-                </div>
-
-            </div>
-
+        <div class="project-info">
+          <span class="project-kind" data-i18n="kind.personal">Projeto pessoal</span>
+          <h2 data-i18n="p1.title">Gestão de Gastos</h2>
+          <p class="project-desc" data-i18n="p1.long">Aplicação web fullstack em Python com Flask. Painel completo de gestão financeira pessoal com banco relacional, autenticação com senhas criptografadas, interface responsiva e dados isolados por usuário. Em produção na nuvem.</p>
+          <div class="tags"><span>Python</span><span>Flask</span><span>SQLite</span><span>SQLAlchemy</span><span>Bootstrap 5</span><span>Jinja2</span></div>
+          <div class="project-buttons">
+            <a href="https://github.com/RafaelGomes-dev/controle-gastos" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span data-i18n="btn.github">GitHub</span></a>
+            <a href="https://controle-gastos-74h4.onrender.com/" class="btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i><span data-i18n="btn.live">Ver ao vivo</span></a>
+          </div>
         </div>
+      </article>
 
-    </section>
-
-
-    <!-- PROJETO 3 -->
-    <section class="project">
-
-        <div class="project-container">
-
-            <div class="project-image">
-
-                <div class="carousel">
-
-                    <button class="carousel-btn prev">❮</button>
-
-                    <div class="carousel-track">
-
-                        <img src="images/it-assets-2.png" class="carousel-img active">
-                        <img src="images/it-assets-3.png" class="carousel-img">
-                        <img src="images/it-assets-4.png" class="carousel-img">
-                        <img src="images/it-assets-5.png" class="carousel-img">
-
-                    </div>
-
-                    <button class="carousel-btn next">❯</button>
-
-                    <div class="carousel-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-
-                </div>
+      <article class="project-row">
+        <div class="project-media-wrap">
+          <div class="carousel" aria-roledescription="carrossel" aria-label="Imagens do bot para Discord">
+            <button class="carousel-btn prev" type="button" aria-label="Imagem anterior"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carousel-track">
+              <img src="images/bot-2.png" class="is-active" alt="Comando de status de servidores" loading="lazy">
+              <img src="images/bot-3.png" alt="Meta de armas" loading="lazy">
+              <img src="images/bot-4.png" alt="Ranking de jogadores" loading="lazy">
+              <img src="images/bot-5.png" alt="Notificação automática" loading="lazy">
             </div>
-
-            <div class="project-info">
-
-                <span class="project-index">03</span>
-                <h2>Gestão de Ativos de TI</h2>
-                <span class="project-type">Backend · Projeto Acadêmico</span>
-
-                <p class="project-desc">
-                    API REST corporativa para gerenciamento de hardware, periféricos e licenças de software vinculados a funcionários. Com autenticação JWT e níveis de acesso (Admin/Usuário), logs de auditoria, links HATEOAS nas respostas e documentação interativa via Swagger. Em produção na nuvem.
-                </p>
-
-                <div class="project-tech-tags">
-                    <span>Java</span>
-                    <span>Spring Boot</span>
-                    <span>PostgreSQL</span>
-                    <span>Spring Security</span>
-                    <span>JWT</span>
-                    <span>HATEOAS</span>
-                    <span>Swagger</span>
-                </div>
-
-                <div class="project-buttons">
-                    <a href="https://github.com/RafaelGomes-dev/gestao-ati" class="btn-primary"><i class="fa-brands fa-github"></i> Ver no GitHub</a>
-                    <a href="https://gestao-ati-production.up.railway.app/swagger-ui/index.html#/" class="btn-secondary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
-                </div>
-
-            </div>
-
+            <button class="carousel-btn next" type="button" aria-label="Próxima imagem"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
+          </div>
         </div>
-
-    </section>
-
-
-    <!-- PROJETO 4 — F1 HUB -->
-    <!-- Imagens do carousel: adicione em images/f1hub-1.png, f1hub-2.png, etc. -->
-    <section class="project alt">
-
-        <div class="project-container">
-
-            <div class="project-image">
-                <div class="carousel">
-                    <button class="carousel-btn prev">❮</button>
-                    <div class="carousel-track">
-                        <img src="images/f1hub-1.png" class="carousel-img active">
-                    </div>
-                    <button class="carousel-btn next">❯</button>
-                    <div class="carousel-dots">
-                        <span class="dot active"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-info">
-                <span class="project-index">04</span>
-                <h2>F1 HUB — Plataforma de Estatísticas de Fórmula 1</h2>
-                <span class="project-type">Fullstack · Projeto Pessoal</span>
-
-                <p class="project-desc">
-                    Aplicação web com calendário de corridas, classificações de pilotos e construtores, e perfis de pilotos, consumindo dados em tempo real de APIs públicas (OpenF1 e f1api.dev). Persistência de dados em PostgreSQL com ambiente containerizado via Docker.
-                </p>
-
-                <div class="project-tech-tags">
-                    <span>Next.js</span>
-                    <span>TypeScript</span>
-                    <span>PostgreSQL</span>
-                    <span>Docker</span>
-                </div>
-
-                <div class="project-buttons">
-                    <a href="#" class="btn-primary" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Ver no GitHub</a>
-                </div>
-            </div>
-
+        <div class="project-info">
+          <span class="project-kind" data-i18n="kind.personal">Projeto pessoal</span>
+          <h2 data-i18n="p2.title">Bot Discord — Call of Duty</h2>
+          <p class="project-desc" data-i18n="p2.long">Bot para Discord voltado a jogadores de Call of Duty. Consulta status de servidores em tempo real via web scraping, exibe o meta de armas atualizado, mantém ranking em SQLite e roda enquetes, sorteios e notificações automáticas. Em produção na nuvem.</p>
+          <div class="tags"><span>Python</span><span>discord.py</span><span>SQLite</span><span>aiohttp</span><span>BeautifulSoup4</span></div>
+          <div class="project-buttons">
+            <a href="https://github.com/RafaelGomes-dev/bot-discord-cod" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span data-i18n="btn.github">GitHub</span></a>
+            <a href="https://discord.gg/azNtmswJ" class="btn" target="_blank" rel="noopener"><i class="fa-brands fa-discord"></i>Discord</a>
+          </div>
         </div>
+      </article>
 
-    </section>
-
-    <!-- PROJETO 5 — BRAINHUB -->
-    <section class="project">
-
-        <div class="project-container">
-
-            <div class="project-image">
-                <div class="carousel">
-                    <button class="carousel-btn prev">❮</button>
-                    <div class="carousel-track">
-                        <img src="images/brainhub-1.png" class="carousel-img active">
-                        <img src="images/brainhub-2.png" class="carousel-img">
-                        <img src="images/brainhub-3.png" class="carousel-img">
-                    </div>
-                    <button class="carousel-btn next">❯</button>
-                    <div class="carousel-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                </div>
+      <article class="project-row">
+        <div class="project-media-wrap">
+          <div class="carousel" aria-roledescription="carrossel" aria-label="Imagens da API de ativos de TI">
+            <button class="carousel-btn prev" type="button" aria-label="Imagem anterior"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carousel-track">
+              <img src="images/it-assets-2.png" class="is-active" alt="Endpoints no Swagger" loading="lazy">
+              <img src="images/it-assets-3.png" alt="Autenticação JWT" loading="lazy">
+              <img src="images/it-assets-4.png" alt="Resposta com links HATEOAS" loading="lazy">
+              <img src="images/it-assets-5.png" alt="Modelo de dados" loading="lazy">
             </div>
-
-            <div class="project-info">
-                <span class="project-index">05</span>
-                <h2>BRAINHUB — Rede Social Universitária</h2>
-                <span class="project-type">Fullstack · Projeto em Dupla</span>
-
-                <p class="project-desc">
-                    Rede social voltada ao público universitário, com autenticação, perfis, sistema de chat e busca global. Desenvolvida em parceria, com controle de acesso via Row Level Security no banco de dados.
-                </p>
-
-                <div class="project-tech-tags">
-                    <span>Next.js</span>
-                    <span>TypeScript</span>
-                    <span>Supabase</span>
-                    <span>PostgreSQL</span>
-                </div>
-
-                <div class="project-buttons">
-                    <a href="#" class="btn-primary" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Ver no GitHub</a>
-                </div>
-            </div>
-
+            <button class="carousel-btn next" type="button" aria-label="Próxima imagem"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
+          </div>
         </div>
-
-    </section>
-
-    <!-- PROJETO 6 — DASHBOARD DE VENDAS E-COMMERCE -->
-    <section class="project alt">
-
-        <div class="project-container">
-
-            <div class="project-image">
-                <div class="carousel">
-                    <button class="carousel-btn prev">❮</button>
-                    <div class="carousel-track">
-                        <img src="images/dashboard-1.png" class="carousel-img active">
-                        <img src="images/dashboard-2.png" class="carousel-img">
-                        <img src="images/dashboard-3.png" class="carousel-img">
-                    </div>
-                    <button class="carousel-btn next">❯</button>
-                    <div class="carousel-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-info">
-                <span class="project-index">06</span>
-                <h2>Dashboard de Vendas E-commerce</h2>
-                <span class="project-type">Data Analytics · Projeto Pessoal</span>
-
-                <p class="project-desc">
-                    Dashboard interativo de análise de vendas com pipeline completo de dados: geração, tratamento (ETL) e visualização. Conta com KPIs, gráficos interativos e filtros dinâmicos em tempo real. Em produção na nuvem.
-                </p>
-
-                <div class="project-tech-tags">
-                    <span>Python</span>
-                    <span>Pandas</span>
-                    <span>Streamlit</span>
-                    <span>Plotly</span>
-                </div>
-
-                <div class="project-buttons">
-                    <a href="https://github.com/RafaelGomes-dev/dashboard-vendas-streamlit" class="btn-primary" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Ver no GitHub</a>
-                    <a href="https://dashboard-vendas-app-2fztakyrenfvx6t2qspqvx.streamlit.app/" class="btn-secondary" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver ao vivo</a>
-                </div>
-            </div>
-
+        <div class="project-info">
+          <span class="project-kind" data-i18n="kind.academic">Projeto acadêmico</span>
+          <h2 data-i18n="p3.title">Gestão de Ativos de TI</h2>
+          <p class="project-desc" data-i18n="p3.long">API REST corporativa para hardware, periféricos e licenças de software vinculados a funcionários. Autenticação JWT com perfis Admin/Usuário, logs de auditoria, links HATEOAS nas respostas e documentação interativa via Swagger. Em produção na nuvem.</p>
+          <div class="tags"><span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>Spring Security</span><span>JWT</span><span>HATEOAS</span><span>Swagger</span></div>
+          <div class="project-buttons">
+            <a href="https://github.com/RafaelGomes-dev/gestao-ati" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span data-i18n="btn.github">GitHub</span></a>
+            <a href="https://gestao-ati-production.up.railway.app/swagger-ui/index.html" class="btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i>Swagger</a>
+          </div>
         </div>
+      </article>
 
+      <article class="project-row">
+        <div class="project-media-wrap">
+          <div class="carousel" aria-roledescription="carrossel" aria-label="Imagens do F1 HUB">
+            <button class="carousel-btn prev" type="button" aria-label="Imagem anterior"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carousel-track">
+              <img src="images/f1hub-1.png" class="is-active" alt="Calendário de corridas do F1 HUB" loading="lazy">
+            </div>
+            <button class="carousel-btn next" type="button" aria-label="Próxima imagem"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-kind" data-i18n="kind.personal">Projeto pessoal</span>
+          <h2 data-i18n="p4.title">F1 HUB — Estatísticas de Fórmula 1</h2>
+          <p class="project-desc" data-i18n="p4.long">Aplicação web com calendário de corridas, classificações de pilotos e construtores e perfis de pilotos, consumindo dados em tempo real de APIs públicas (OpenF1 e f1api.dev). Persistência em PostgreSQL com ambiente containerizado via Docker.</p>
+          <div class="tags"><span>Next.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Docker</span></div>
+          <div class="project-buttons">
+            <a href="#" class="btn btn-ghost" aria-disabled="true"><i class="fa-brands fa-github"></i><span data-i18n="btn.soon">Repositório em breve</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-row">
+        <div class="project-media-wrap">
+          <div class="carousel" aria-roledescription="carrossel" aria-label="Imagens do BrainHub">
+            <button class="carousel-btn prev" type="button" aria-label="Imagem anterior"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carousel-track">
+              <img src="images/brainhub-1.png" class="is-active" alt="Feed do BrainHub" loading="lazy">
+              <img src="images/brainhub-2.png" alt="Perfil de usuário" loading="lazy">
+              <img src="images/brainhub-3.png" alt="Chat entre usuários" loading="lazy">
+            </div>
+            <button class="carousel-btn next" type="button" aria-label="Próxima imagem"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-kind" data-i18n="kind.pair">Projeto em dupla</span>
+          <h2 data-i18n="p5.title">BrainHub — Rede social universitária</h2>
+          <p class="project-desc" data-i18n="p5.long">Rede social para o público universitário com autenticação, perfis, chat e busca global. Desenvolvida em dupla, com controle de acesso garantido por Row Level Security no banco de dados.</p>
+          <div class="tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>PostgreSQL</span></div>
+          <div class="project-buttons">
+            <a href="#" class="btn btn-ghost" aria-disabled="true"><i class="fa-brands fa-github"></i><span data-i18n="btn.soon">Repositório em breve</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-row">
+        <div class="project-media-wrap">
+          <div class="carousel" aria-roledescription="carrossel" aria-label="Imagens do dashboard de vendas">
+            <button class="carousel-btn prev" type="button" aria-label="Imagem anterior"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carousel-track">
+              <img src="images/dashboard-1.png" class="is-active" alt="Visão geral com KPIs" loading="lazy">
+              <img src="images/dashboard-2.png" alt="Gráfico de vendas por período" loading="lazy">
+              <img src="images/dashboard-3.png" alt="Filtros dinâmicos" loading="lazy">
+            </div>
+            <button class="carousel-btn next" type="button" aria-label="Próxima imagem"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-kind" data-i18n="kind.personal">Projeto pessoal</span>
+          <h2 data-i18n="p6.title">Dashboard de Vendas E-commerce</h2>
+          <p class="project-desc" data-i18n="p6.long">Dashboard interativo de análise de vendas com pipeline completo de dados: geração, tratamento (ETL) e visualização. KPIs, gráficos interativos e filtros dinâmicos em tempo real. Em produção na nuvem.</p>
+          <div class="tags"><span>Python</span><span>Pandas</span><span>Streamlit</span><span>Plotly</span></div>
+          <div class="project-buttons">
+            <a href="https://github.com/RafaelGomes-dev/dashboard-vendas-streamlit" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i><span data-i18n="btn.github">GitHub</span></a>
+            <a href="https://dashboard-vendas-app-2fztakyrenfvx6t2qspqvx.streamlit.app/" class="btn" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i><span data-i18n="btn.live">Ver ao vivo</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <section class="cta container">
+      <h2><span data-i18n="cta.title">Interessado em trabalhar comigo</span><span>?</span></h2>
+      <p data-i18n="cta.desc">Posso ajudar no desenvolvimento do seu projeto ou ideia.</p>
+      <a href="contact.html" class="btn btn-lg" data-i18n="cta.btn">Entrar em contato</a>
     </section>
 
+  </main>
 
-    <!-- ===== CTA FINAL ===== -->
-
-    <section class="projects-cta">
-
-        <h2>Interessado em trabalhar comigo<span>?</span></h2>
-
-        <p>Posso ajudar no desenvolvimento do seu projeto ou ideia.</p>
-
-        <a href="contact.html" class="btn-primary-big">
-            Entrar em contato
-        </a>
-
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <p>© 2026 Rafael Gomes — Todos os direitos reservados</p>
-    </footer>
-
-    <script src="js/carousel.js" defer></script>
-
-
-
+  <footer class="site-footer">
+    <div class="container">
+      <p data-i18n="footer">© 2026 Rafael Gomes</p>
+      <nav aria-label="Rodapé">
+        <a href="https://github.com/RafaelGomes-dev" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/rafael-gomes-1b91a6280" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:rafinhagomes1231@gmail.com">E-mail</a>
+      </nav>
+    </div>
+  </footer>
 
 </body>
-
 </html>
